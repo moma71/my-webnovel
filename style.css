@@ -166,6 +166,42 @@ body {
     padding-top: 60px; /* 헤더 고정 공간 확보 */
 }
 
+/* ===== INDEX PAGE STYLES (Hero & Episode) 수정 ===== */
+
+/* HERO SECTION */
+.hero {
+    width: 100%;
+    /* 이전 배경색, 패딩 등 유지 */
+    background: linear-gradient(145deg, #6e8df5, #88a8ff);
+    padding: 80px 5%; 
+    text-align: center; /* 이미 중앙 정렬이 되어 있음 */
+    color: white;
+    box-sizing: border-box;
+    /* 추가: 내부 콘텐츠를 중앙에 모으는 컨테이너 역할을 강화합니다. */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 내부 요소들을 중앙에 배치 (제목, 부제, 버튼) */
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    word-break: keep-all; 
+    margin-top: 0;
+    /* 필요 시: 제목의 최대 너비를 지정하여 중앙 정렬을 명확히 합니다. */
+    max-width: 600px;
+}
+
+.hero p {
+    margin-top: 0;
+    font-size: 20px;
+    word-break: keep-all;
+    /* 추가: 부제의 너비를 제한하여 중앙 정렬을 강조합니다. */
+    max-width: 700px; 
+}
+
 /* About Page - HERO */
 .hero.about-hero {
     padding: 90px 5%; 
