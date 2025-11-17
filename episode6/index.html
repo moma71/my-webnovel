@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episode 6 — Do, 85%</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Pretendard', Arial, sans-serif;
+            background: #f7f9fc;
+        }
+
+        /* HEADER */
+        .navbar {
+            width: 100%;
+            padding: 18px 28px;
+            background: #ffffffcc;
+            backdrop-filter: blur(6px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            border-bottom: 1px solid #e5e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2f3b52;
+            text-decoration: none;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 18px;
+            color: #2f3b52;
+            font-weight: 500;
+        }
+
+        /* WRAPPER */
+        .container {
+            padding: 120px 20px 60px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 25px;
+            color: #28344e;
+        }
+
+        .chapter-block {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+            font-size: 19px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        /* NAV BUTTONS */
+        .nav-ep {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .ep-btn {
+            padding: 14px 22px;
+            background: #4c6ef5;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 17px;
+            transition: 0.2s;
+        }
+
+        .ep-btn:hover {
+            background: #3c5ee0;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+            .nav-ep {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .ep-btn {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="navbar">
+        <a href="/" class="logo">📘 Do, 85%</a>
+        <div>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container">
+        <h1>Episode 6 — 작성중</h1>
+
+        <div class="chapter-block">
+            <p><em>이 에피소드는 현재 작성 중입니다.</em></p>
+            <p>조만간 업데이트됩니다. 조금만 기다려주세요! 😊</p>
+        </div>
+
+        <!-- EP NAVIGATION -->
+        <div class="nav-ep">
+            <a class="ep-btn" href="/episode5/index.html">← Episode 5</a>
+            <a class="ep-btn" href="/episode7/index.html">Episode 7 →</a>
+        </div>
+    </div>
+
+</body>
+</html>

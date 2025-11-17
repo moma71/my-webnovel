@@ -1,3 +1,89 @@
+/* ===== Navigation (global) ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(245,246,250,0.98);
+  backdrop-filter: blur(6px);
+  z-index: 1200;
+  border-bottom: 1px solid rgba(30,41,59,0.04);
+}
+
+.site-header .nav-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding: 12px 20px;
+}
+
+.brand .logo {
+  font-weight:700;
+  color:#243447;
+  text-decoration:none;
+  font-size:18px;
+}
+
+.main-nav {
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+
+.main-nav a {
+  color:#243447;
+  text-decoration:none;
+  font-weight:600;
+  padding:8px 10px;
+  border-radius:8px;
+}
+
+.main-nav a:hover {
+  background: rgba(76,110,245,0.12);
+  color: #2b3dff;
+}
+
+/* 모바일 토글 (hidden on desktop) */
+.nav-toggle {
+  display:none;
+  background:transparent;
+  border:0;
+  cursor:pointer;
+  width:36px;
+  height:36px;
+  align-items:center;
+  justify-content:center;
+  padding:6px;
+}
+.nav-toggle span {
+  display:block;
+  width:20px;
+  height:2px;
+  background:#243447;
+  margin:4px 0;
+  border-radius:2px;
+}
+
+/* 모바일 레이아웃 */
+@media (max-width:768px) {
+  .main-nav { 
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    background:white;
+    box-shadow:0 8px 28px rgba(15,23,42,0.08);
+    border-radius:10px;
+    padding:10px;
+    flex-direction:column;
+    gap:8px;
+    display:none; /* 토글에 의해 보임 */
+    min-width:160px;
+  }
+  .main-nav.show { display:flex; }
+
+  .nav-toggle { display:flex; }
+}
+
 /* ===== 기본 레이아웃 ===== */
 body {
     font-family: 'Pretendard', 'Arial', sans-serif;
