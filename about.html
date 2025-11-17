@@ -4,139 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About — Do, 85%</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Pretendard', 'Arial', sans-serif;
-            background: #f8f9fc;
-            color: #1a1a1a;
-        }
+<body class="about-page">
 
-        /* HEADER */
-        .navbar {
-            width: 100%;
-            padding: 18px 30px;
-            background: #ffffffdd;
-            backdrop-filter: blur(8px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 50;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #e8ecf4;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: #1a1a1a;
-            font-size: 18px;
-            margin-left: 25px;
-            font-weight: 500;
-        }
-
-        /* HERO */
-        .hero {
-            margin-top: 80px;
-            text-align: center;
-            padding: 90px 20px;
-            background: linear-gradient(to right, #4c6ef5, #7f9cff);
-            color: white;
-        }
-
-        .hero-title {
-            font-size: 46px;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .hero-sub {
-            font-size: 20px;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* CONTENT */
-        .section {
-            max-width: 850px;
-            margin: 70px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            font-size: 30px;
-            font-weight: 700;
-            margin-bottom: 18px;
-        }
-
-        .text-block {
-            font-size: 18px;
-            line-height: 1.65;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        /* PROFILE CARD */
-        .profile-card {
-            display: flex;
-            gap: 25px;
-            background: white;
-            padding: 30px;
-            border-radius: 14px;
-            box-shadow: 0 5px 16px rgba(0,0,0,0.08);
-            align-items: center;
-        }
-
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 100%;
-            background: #dbe1ff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 40px;
-            color: #4c6ef5;
-            font-weight: 800;
-        }
-
-        .profile-info h3 {
-            font-size: 24px;
-            margin-bottom: 6px;
-        }
-
-        .profile-info p {
-            margin: 4px 0;
-            color: #555;
-            font-size: 17px;
-        }
-
-        /* MOBILE */
-        @media (max-width: 650px) {
-            .profile-card {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <div style="font-size:22px; font-weight:700;">📘 Do, 85%</div>
-        <div>
-            <a href="/">Home</a>
-            <a href="/about.html">About</a>
+    <header class="site-header">
+        <div class="nav-inner">
+            <div class="brand">
+                <a href="index.html" class="logo">📘 Do, 85%</a>
+            </div>
+            
+            <nav class="main-nav" id="main-menu-about">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </nav>
+            
+            <button class="nav-toggle" aria-controls="main-menu-about" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </div>
+    </header>
 
-    <!-- HERO BANNER -->
-    <section class="hero">
+    <section class="hero about-hero">
         <div class="hero-title">About This Project</div>
         <div class="hero-sub">
             현장 중심 리얼리즘 소설과 AI 실무 튜토리얼을 결합한  
@@ -144,7 +36,6 @@
         </div>
     </section>
 
-    <!-- PROJECT OVERVIEW -->
     <section class="section">
         <div class="section-title">📌 프로젝트 개요</div>
         <div class="text-block">
@@ -163,7 +54,6 @@
         </div>
     </section>
 
-    <!-- CREATOR PROFILE -->
     <section class="section">
         <div class="section-title">✍️ 작가 소개</div>
 
@@ -189,6 +79,18 @@
             실험적이면서도 교육적인 창작물입니다.
         </div>
     </section>
+
+    <script>
+        // 햄버거 메뉴 토글 로직 (index.html과 동일)
+        const toggleButton = document.querySelector('.nav-toggle');
+        const mainNav = document.getElementById('main-menu-about');
+        
+        toggleButton.addEventListener('click', () => {
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('show');
+        });
+    </script>
 
 </body>
 </html>

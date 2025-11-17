@@ -3,10 +3,10 @@
   position: sticky;
   top: 0;
   width: 100%;
-  background: rgba(245,246,250,0.98);
+  background: rgba(255, 255, 255, 0.98); /* 배경을 흰색으로 통일 */
   backdrop-filter: blur(6px);
   z-index: 1200;
-  border-bottom: 1px solid rgba(30,41,59,0.04);
+  border-bottom: 1px solid rgba(30,41,59,0.08); /* 경계선 강화 */
 }
 
 .site-header .nav-inner {
@@ -14,6 +14,8 @@
   align-items:center;
   justify-content:space-between;
   gap:12px;
+  max-width: 1200px; /* 최대 너비 설정 */
+  margin: 0 auto;
   padding: 12px 20px;
 }
 
@@ -21,12 +23,12 @@
   font-weight:700;
   color:#243447;
   text-decoration:none;
-  font-size:18px;
+  font-size:20px; /* 로고 글자 크기 통일 */
 }
 
 .main-nav {
   display:flex;
-  gap:18px;
+  gap:25px; /* 메뉴 간격 통일 */
   align-items:center;
 }
 
@@ -36,105 +38,223 @@
   font-weight:600;
   padding:8px 10px;
   border-radius:8px;
+  transition: background 0.2s;
 }
 
 .main-nav a:hover {
   background: rgba(76,110,245,0.12);
-  color: #2b3dff;
+  color: #4C6EF5; /* 호버 시 색상 강조 */
 }
 
 /* 모바일 토글 (hidden on desktop) */
 .nav-toggle {
   display:none;
-  background:transparent;
-  border:0;
+  flex-direction:column;
+  justify-content:space-around;
+  width:24px;
+  height:20px;
+  background:none;
+  border:none;
   cursor:pointer;
-  width:36px;
-  height:36px;
-  align-items:center;
-  justify-content:center;
-  padding:6px;
+  padding:0;
 }
+
 .nav-toggle span {
   display:block;
-  width:20px;
+  width:24px;
   height:2px;
   background:#243447;
   margin:4px 0;
   border-radius:2px;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
-/* 모바일 레이아웃 */
+/* ===== 모바일 레이아웃: 768px 이하에서 적용 ===== */
 @media (max-width:768px) {
+  /* 햄버거 메뉴 표시 */
+  .nav-toggle { display:flex; }
+  
+  /* 메인 메뉴 숨기기 및 스타일링 */
   .main-nav { 
     position: absolute;
-    top: 60px;
-    right: 16px;
+    top: 60px; /* 헤더 높이(12px 패딩 + 12px 패딩 + 36px 컨텐츠 높이)에 맞춰 조정 필요 */
+    right: 20px; 
     background:white;
-    box-shadow:0 8px 28px rgba(15,23,42,0.08);
+    box-shadow:0 8px 28px rgba(15,23,42,0.15);
     border-radius:10px;
-    padding:10px;
+    padding:10px 15px;
     flex-direction:column;
-    gap:8px;
-    display:none; /* 토글에 의해 보임 */
-    min-width:160px;
+    gap:5px;
+    display:none; /* 기본 숨김 */
+    min-width:150px;
+    align-items:flex-start;
   }
-  .main-nav.show { display:flex; }
+  
+  .main-nav.show { display:flex; } 
 
-  .nav-toggle { display:flex; }
+  .main-nav a {
+      width: 100%; 
+      padding: 10px 15px;
+  }
 }
 
-/* ===== 기본 레이아웃 ===== */
+/* ===== BASE & LAYOUT (index.html, about.html 공통) ===== */
+
 body {
     font-family: 'Pretendard', 'Arial', sans-serif;
-    background: #f5f6fa;
+    background: #f2f3f7; /* 배경색 통일 */
     margin: 0;
     padding: 0;
     color: #333;
+    overflow-x: hidden;
 }
 
-/* 공통 컨테이너 */
+/* 공통 컨테이너: Hero와 Section에 flex-wrap 대응 */
 .container {
     max-width: 900px;
-    margin: 60px auto;
+    margin: 0 auto;
     padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* ===== INDEX PAGE STYLES (Episode List) ===== */
+
+.episode-section {
+    padding: 60px 20px;
     text-align: center;
 }
 
-/* 제목 */
-h1 {
-    font-size: 42px;
-    margin-bottom: 40px;
-    color: #2d3e50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
+.episode-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
-/* 에피소드 버튼 영역 */
-.btn-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 18px;
+.episode-grid {
+    display: grid; 
+    /* 반응형 그리드: 최소 200px 크기를 유지하며 가능한 만큼 열을 자동 배치 */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .episode-btn {
-    background: #4c6ef5;
+    background: #5279ff;
     color: white;
-    padding: 15px 26px;
+    padding: 15px 10px;
     border-radius: 10px;
-    font-size: 18px;
     text-decoration: none;
-    transition: 0.25s;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; 
 }
 
 .episode-btn:hover {
-    background: #3b5bdb;
+    background: #325ce6;
     transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== Episode 본문 페이지 ===== */
-.ep-co
+/* ===== ABOUT PAGE SPECIFIC STYLES ===== */
+
+.about-page {
+    padding-top: 60px; /* 헤더 고정 공간 확보 */
+}
+
+/* About Page - HERO */
+.hero.about-hero {
+    padding: 90px 5%; 
+    text-align: center;
+    background: linear-gradient(145deg, #4c6ef5, #7f9cff); /* 그라디언트 통일 */
+    color: white;
+    margin-top: 0;
+}
+
+.hero-title {
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.hero-sub {
+    font-size: 20px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* About Page - Content Sections */
+.section {
+    max-width: 850px;
+    margin: 70px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #4c6ef5; /* 제목 색상 강조 */
+}
+
+.text-block {
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Profile Card Responsive */
+.profile-card {
+    display: flex;
+    gap: 25px;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 16px rgba(0,0,0,0.08);
+    align-items: center;
+}
+
+@media (max-width: 650px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* ===== 모바일 전용 미디어 쿼리 추가/통합 ===== */
+@media (max-width: 480px) {
+    /* 내비게이션 패딩 조정 */
+    .site-header .nav-inner {
+        padding: 12px 15px; 
+    }
+    
+    /* Hero 폰트 크기 조정 (Index/About 공통) */
+    .hero h1 {
+        font-size: 32px;
+    }
+    .hero p, .hero-sub {
+        font-size: 16px;
+    }
+
+    /* Index Page: 에피소드 그리드를 1열로 변경 */
+    .episode-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* About Page: 섹션 타이틀 크기 조정 */
+    .section-title {
+        font-size: 24px;
+    }
+    .text-block {
+        font-size: 16px;
+    }
+}

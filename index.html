@@ -5,163 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do, 85% - Web Novel</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: "Pretendard", sans-serif;
-            background: #f2f3f7;
-        }
-
-        /* ---------- NAVBAR ---------- */
-        nav {
-            width: 100%;
-            background: white;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 60px;
-            border-bottom: 1px solid #e1e1e1;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-size: 16px;
-        }
-
-        .nav-right a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        /* ---------- HERO SECTION ---------- */
-        .hero {
-            width: 100%;
-            background: linear-gradient(145deg, #6e8df5, #88a8ff);
-            padding: 80px 20px;
-            text-align: center;
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            margin-top: 0;
-            font-size: 20px;
-        }
-
-        .hero button {
-            margin-top: 25px;
-            padding: 12px 30px;
-            background: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .hero button:hover {
-            transform: scale(1.05);
-        }
-
-        /* ---------- EPISODE LIST ---------- */
-        .episode-section {
-            width: 100%;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .episode-title {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-
-        .episode-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .episode-btn {
-            background: #5279ff;
-            color: white;
-            padding: 15px 35px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.2s;
-            display: inline-block;
-        }
-
-        .episode-btn:hover {
-            background: #325ce6;
-            transform: translateY(-3px);
-        }
-
-        /* ---------- RESPONSIVE ---------- */
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 34px;
-            }
-            .hero p {
-                font-size: 16px;
-            }
-            nav {
-                padding: 0 10px;
-            }
-            .nav-right {
-                gap: 12px;
-                font-size: 14px;
-            }
-        }
-    </style>
-</head>
+    </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="nav-left">
-            📘 <span>Do, 85%</span>
+    <header class="site-header">
+        <div class="nav-inner">
+            <div class="brand">
+                <a href="index.html" class="logo">📘 Do, 85%</a>
+            </div>
+            
+            <nav class="main-nav" id="main-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </nav>
+            
+            <button class="nav-toggle" aria-controls="main-menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="nav-right">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-        </div>
-    </nav>
+    </header>
 
-    <!-- HERO BANNER -->
     <div class="hero">
         <h1>Do, 85%</h1>
         <p>현장 중심 리얼리즘 × AI 실무 튜토리얼 웹소설 프로젝트</p>
         <button onclick="location.href='#episodes'">에피소드 바로 보기</button>
     </div>
 
-    <!-- EPISODE LIST -->
-    <section id="episodes" class="episode-section">
+    <section id="episodes" class="container episode-section">
         <div class="episode-title">📖 에피소드 목록</div>
 
         <div class="episode-grid">
@@ -174,6 +47,18 @@
             <a class="episode-btn" href="episode7/index.html">Episode 7</a>
         </div>
     </section>
+
+    <script>
+        // 햄버거 메뉴 토글 로직
+        const toggleButton = document.querySelector('.nav-toggle');
+        const mainNav = document.getElementById('main-menu');
+        
+        toggleButton.addEventListener('click', () => {
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('show');
+        });
+    </script>
 
 </body>
 </html>
