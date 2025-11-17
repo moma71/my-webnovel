@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/your-banner.png" width="100%">
+<img src="https://i.imgur.com/Q6aZQ0A.png" alt="banner" width="100%" style="max-height:260px; object-fit:cover;">
 
 # 📘 Do, 85%
 
-### **CJ대한통운 AI 도입 생존기**
+### CJ대한통운 AI 도입 생존기
 
 현장 물류팀 × AI 프로젝트팀  
 리얼 오피스 드라마 + 실무형 AI 튜토리얼 웹소설
@@ -13,71 +13,51 @@
 
 ---
 
-## 🔗 **웹소설 사이트 바로가기**
+## 🔗 웹사이트 바로가기
 
-👉 https://moma71.github.io/my-webnovel/
-
----
+[사이트 열기](https://moma71.github.io/my-webnovel/)
 
 </div>
 
-## 🌟 프로젝트 개요
+## 🌟 프로젝트 한줄 요약
 
-**Do, 85%**는  
-대한통운 물류센터의 AI 시스템 도입 과정에서 벌어지는  
-**현실적인 사람·조직·기술의 충돌과 성장**을 그리는  
-하이브리드 웹소설 프로젝트입니다.
-
-- 총 20화
-- 삽화 200+ 장
-- 실무형 AI 튜토리얼 포함
-- “미생” + “AI 실제 도입” 분위기
+현장 중심의 리얼리즘 소설에 AI 실무 튜토리얼을 결합한 하이브리드 웹소설 프로젝트
+입니다.
 
 ---
 
-## 📂 에피소드 구조
+## 📂 에피소드 (빠른 링크)
 
-| Phase   | 내용 | 에피소드 |
-| ------- | ---- | -------- |
-| Phase 1 | 저항 | 1~5      |
-| Phase 2 | 탐색 | 6~10     |
-| Phase 3 | 성장 | 11~15    |
-| Phase 4 | 위기 | 16~18    |
-| Phase 5 | 결말 | 19~20    |
-
----
-
-## 👤 주요 인물
-
-| 캐릭터          | 역할                            |
-| --------------- | ------------------------------- |
-| **최도진**      | 물류센터 8년차, 85% 법칙 신봉자 |
-| **이서윤**      | 본사 AI PM, 데이터 중심 리더    |
-| **박석호 차장** | 도진의 멘토                     |
-| **김택배**      | 현장 베테랑                     |
-| **정민수 과장** | 성과주의 전략기획팀             |
+|  에피소드 |              링크              |
+| --------: | :----------------------------: |
+| Episode 1 | 🔗 [보기](episode1/index.html) |
+| Episode 2 | 🔗 [보기](episode2/index.html) |
+| Episode 3 | 🔗 [보기](episode3/index.html) |
+| Episode 4 | 🔗 [보기](episode4/index.html) |
+| Episode 5 | 🔗 [보기](episode5/index.html) |
+| Episode 6 | 🔗 [보기](episode6/index.html) |
+| Episode 7 | 🔗 [보기](episode7/index.html) |
 
 ---
 
-## 🤖 AI 튜토리얼 레벨
+## ✨ 핵심 포인트
 
-- **레벨 1**: 기초 프롬프트
-- **레벨 2**: 요약 및 보고
-- **레벨 3**: 데이터 처리
-- **레벨 4**: 현장 자동화 모델
-
----
-
-## 📮 제작 도구
-
-- ChatGPT
-- Claude
-- **NanoBanana / VEO3**
+- 총 20화, 매 화 실무형 AI 프롬프트 포함
+- 현실적인 직장 서사(“85% 법칙”)
+- 실무 튜토리얼 → 바로 쓰는 프롬프트 제공
 
 ---
 
-<div align="center">
+## 🛠 사용 도구
 
-### **“완벽한 시스템은 없다. 중요한 건 돌아가게 하는 것이다.”**
+- HTML / CSS
+- GitHub Pages (호스팅)
+- 제작 도구: ChatGPT, Claude, NanoBanana / VEO3
 
-</div>
+---
+
+## 📮 연락
+
+- 이메일: moma7103@gmail.com
+
+---
