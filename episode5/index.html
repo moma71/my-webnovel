@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do, 85% - CJ대한통운 AI 도입 생존기 (Episode 5)</title>
+    <style>
+        /* 기본 스타일: 웹소설처럼 읽기 편하도록 설정 */
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            line-height: 1.8;
+            max-width: 650px; /* 가독성을 위해 최대 너비 제한 */
+            margin: 0 auto;
+            padding: 30px 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            line-height: 1.5;
+            margin-top: 40px;
+        }
+        h1 { font-size: 1.8em; color: #007bff; }
+        h2 { font-size: 1.4em; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
+        h3 { font-size: 1.2em; color: #555; }
+        p {
+            margin-bottom: 1.5em;
+            text-align: justify;
+        }
+        .scene-video {
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 30px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        .caption {
+            text-align: center;
+            font-style: italic;
+            color: #777;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        .separator {
+            border-top: 1px solid #eee;
+            margin: 40px 0;
+        }
+        .ai-guide {
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #e6f7ff;
+            border-left: 5px solid #007bff;
+            border-radius: 5px;
+        }
+        .prompt-code {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px dashed #007bff;
+            white-space: pre-wrap;
+            font-family: monospace;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+        .email-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #fff;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .highlight {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chapter-title">
+        <h1>📦 Do, 85% - CJ대한통운 AI 도입 생존기</h1>
+        <h2>Episode 5: "제안서"</h2>
+        <div class="separator"></div>
+    </div>
+
+    <h3 id="scene-1">🏢 본사 회의실</h3>
+    <video class="scene-video" src="01.mp4" controls autoplay title="11월 19일 화요일. 오전 10시. AI 프로젝트 중간 보고."></video>
+    <div class="caption">11월 19일 화요일. 오전 10시. AI 프로젝트 중간 보고.</div>
+
+    <p>11월 19일 화요일. 오전 10시.</p>
+    <p>본사 4층 대회의실.</p>
+    <p>서윤은 앞에 섰다. 노트북이 스크린에 연결되어 있었다.</p>
+    <p>정민수가 앉아 있었다. 본부장, 팀장 5명. 도진도 있었다.</p>
+    <p>"시작하겠습니다."</p>
+    <p>서윤이 리모컨을 눌렀다.</p>
+    <p>슬라이드가 넘어갔다.</p>
+    <p><strong>"CJ 대한통운 AI 도입 현황 - 1주차 보고"</strong></p>
+    <p>"지난주 곤지암 현장에서 4일간 작업했습니다."</p>
+    <p>사진이 떴다. 컨베이어 벨트. 7번 라인. 서윤이 스캔하는 모습.</p>
+    <p>"현장에서 직접 바코드 스캔 작업을 했습니다. 시간당 평균 400개. 손에 물집이 생겼고요."</p>
+    <p>서윤이 손을 들어 보였다. 반창고가 아직 붙어 있었다.</p>
+    <p>본부장이 미간을 찌푸렸다.</p>
+    <p>"PM이 왜 현장 작업을?"</p>
+    <p>"현장을 이해하지 못하면 AI 시스템을 만들 수 없다고 판단했습니다."</p>
+    <p>"...계속하세요."</p>
+    <p>서윤이 다음 슬라이드를 넘겼다.</p>
+    <p><strong>"1차 결론: AI 단독 시스템은 불가능"</strong></p>
+    <p>회의실이 조용해졌다.</p>
+    <p>정민수가 앞으로 몸을 기울였다.</p>
+    <p>"무슨 말이에요? AI 도입이 목표 아니었나?"</p>
+    <p>"AI 도입은 맞습니다. 하지만 AI만으로는 안 됩니다."</p>
+    <p>"왜?"</p>
+    <p>"데이터에 없는 변수가 너무 많습니다."</p>
+    <p>서윤이 다음 슬라이드를 넘겼다.</p>
+    <p><strong>"현장에서 발견한 변수"</strong></p>
+    <ul>
+        <li>습도 변화 → 바코드 인식률 저하</li>
+        <li>물량 급증 → 예측 불가능</li>
+        <li>인력 결근 → 실시간 대응 필요</li>
+        <li>센서 오류 → 수동 수리 필요</li>
+        <li>특수 상황 → AI 학습 데이터 부족</li>
+    </ul>
+    <p>"이런 변수들은 데이터에 잡히지 않습니다. 그리고 매일 다릅니다."</p>
+    <p>도진이 고개를 끄덕였다.</p>
+    <p>"그럼 AI 프로젝트는 취소하자는 건가요?"</p>
+    <p>본부장이 물었다.</p>
+    <p>"아니요."</p>
+    <p>서윤이 다음 슬라이드를 넘겼다.</p>
+    <p><strong>"제안: 하이브리드 시스템"</strong></p>
+    <p><strong>AI 85% + 사람 15%</strong></p>
+    <p>"AI가 85%의 정형화된 작업을 처리합니다. 사람은 나머지 15%의 예외 상황을 처리합니다."</p>
+    <p>"85%는 어떻게 나온 숫자예요?"</p>
+    <p>"곤지암 현장 데이터입니다."</p>
+    <p>서윤이 표를 보여줬다.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>작업 유형</th>
+                <th>비율</th>
+                <th>AI 가능</th>
+                <th>사람 필요</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>정상 스캔</td>
+                <td>82%</td>
+                <td>✓</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>재스캔</td>
+                <td>3%</td>
+                <td>✓</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>수동 분류</td>
+                <td>8%</td>
+                <td></td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>센서 오류</td>
+                <td>4%</td>
+                <td></td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>특수 처리</td>
+                <td>3%</td>
+                <td></td>
+                <td>✓</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>"정상 스캔과 재스캔은 AI가 할 수 있습니다. 85%. 나머지 15%는 사람의 판단이 필요합니다."</p>
+    <p>정민수가 팔짱을 꼈다.</p>
+    <p>"그럼 효율 개선이 얼마나 돼요?"</p>
+    <p>"AI 단독으로는 27% 증가 예상이었습니다. 하지만 하이브리드는..."</p>
+    <p>서윤이 숨을 들이쉬었다.</p>
+    <p>"12% 증가 예상입니다."</p>
+    <p>"27%에서 12%로 떨어졌다고요?"</p>
+    <p>"네. 하지만 실현 가능합니다."</p>
+    <p>"실현 가능하지만 효율이 절반이라는 게 무슨 말이에요?"</p>
+    <p>"27%는 이론입니다. 12%는 실제입니다."</p>
+    <p>서윤이 도진을 봤다.</p>
+    <p>"현장에서 배웠습니다. 완벽한 시스템은 없습니다. 85%면 됩니다. 나머지 15%는 사람이 메웁니다."</p>
+
+    <h3 id="scene-2">🤝 도진과 서윤의 교감</h3>
+    <video class="scene-video" src="02.mp4" controls autoplay title="도진이 고개를 끄덕인다. 서윤이 그를 본다. 무언의 이해."></video>
+    <div class="caption">도진이 고개를 끄덕인다. 서윤이 그를 본다. 무언의 이해.</div>
+
+    <p>도진이 일어섰다.</p>
+    <p>"제가 말씀드려도 될까요?"</p>
+    <p>본부장이 고개를 끄덕였다.</p>
+    <p>"저는 곤지암에서 8년 일했습니다. 현장에서 AI 없이 일했어요."</p>
+    <p>도진이 스크린을 가리켰다.</p>
+    <p>"서윤 PM 말이 맞습니다. 현장은 매일 다릅니다. 날씨, 물량, 사람 컨디션. 다 다릅니다. AI는 평균을 계산하지만, 우리는 예외를 처리합니다."</p>
+    <p>"그럼 AI가 필요 없다는 건가요?"</p>
+    <p>"필요합니다. 85%는 AI가 더 빠릅니다. 근데 15%는 우리가 더 빠릅니다."</p>
+    <p>도진이 앉았다.</p>
+    <p>본부장이 서윤을 봤다.</p>
+    <p>"구체적인 실행 계획이 있어요?"</p>
+    <p>"네."</p>
+    <p>서윤이 마지막 슬라이드를 넘겼다.</p>
+    <p><strong>"Phase 1: 파일럿 프로그램"</strong></p>
+    <ul>
+        <li>기간: 2주</li>
+        <li>장소: 곤지암 7번 라인</li>
+        <li>팀: 서윤(PM) + 도진(현장 대표)</li>
+        <li>목표: 하이브리드 시스템 프로토타입</li>
+    </ul>
+    <p>"2주 동안 7번 라인에서 테스트합니다. AI가 정상 스캔을 처리하고, 예외 상황은 도진 대리님이 처리합니다."</p>
+    <p>"2주 후에는?"</p>
+    <p>"결과 보고드립니다. 실제 효율 개선율을 측정합니다."</p>
+    <p>정민수가 본부장을 봤다.</p>
+    <p>본부장이 고개를 끄덕였다.</p>
+    <p>"좋아요. 2주 주겠습니다. 근데 조건이 있어요."</p>
+    <p>"말씀하세요."</p>
+    <p>"12% 개선이 안 나오면 프로젝트 종료합니다."</p>
+    <p>"...알겠습니다."</p>
+    <p>"그리고 도진 대리."</p>
+    <p>"네."</p>
+    <p>"2주 동안 본사 출근하세요. 서윤 PM 도와주고."</p>
+    <p>"...알겠습니다."</p>
+    <p>회의가 끝났다.</p>
+
+    <div class="separator"></div>
+
+    <p>오후 1시.</p>
+    <p>서윤과 도진은 구내식당에 있었다.</p>
+    <p>"2주면 짧은데요."</p>
+    <p>도진이 말했다.</p>
+    <p>"알아요. 근데 방법이 있어요."</p>
+    <p>서윤이 노트북을 꺼냈다.</p>
+    <p>"AI 써서 빠르게 만들어야 해요."</p>
+    <p>"무슨 AI요?"</p>
+    <p>"Claude요."</p>
+    <p>"뭐요?"</p>
+    <p>"Claude. ChatGPT보다 긴 맥락을 처리할 수 있어요. 그리고 문서 작업이 강해요."</p>
+    <p>서윤이 화면을 보여줬다.</p>
+    <p>"우리가 2주 안에 해야 할 거요."</p>
+    <p><strong>To-Do List</strong>:</p>
+    <ol>
+        <li>현장 데이터 수집 양식 설계</li>
+        <li>AI 알고리즘 설계 문서</li>
+        <li>예외 상황 매뉴얼 작성</li>
+        <li>시스템 통합 계획서</li>
+        <li>테스트 시나리오 100개</li>
+        <li>최종 보고서 템플릿</li>
+    </ol>
+    <p>"이걸 2주에요?"</p>
+    <p>"네. 혼자는 4주 걸려요. 근데 Claude 쓰면 2주 가능해요."</p>
+    <p>"그게 가능해요?"</p>
+    <p>"가능하게 만들어야죠."</p>
+
+    <h3 id="scene-3">💡 Claude 인터페이스</h3>
+    <video class="scene-video" src="03.mp4" controls autoplay title="서윤의 노트북. Claude 인터페이스가 떠 있다. '협업의 시작'."></video>
+    <div class="caption">서윤의 노트북. Claude 인터페이스가 떠 있다. "협업의 시작".</div>
+
+    <p>서윤이 Claude를 열었다.</p>
+    <p>첫 번째 대화.</p>
+
+    <div class="email-box">
+        <p><strong>서윤의 Claude 프롬프트</strong>:</p>
+        <div class="prompt-code">
+            나는 물류 센터에서 AI 하이브리드 시스템을 2주 안에 구축해야 합니다.
+            <br>
+            <br>프로젝트 정보:
+            <br>- 목표: 바코드 스캔 자동화 + 예외 처리 매뉴얼
+            <br>- 기간: 2주
+            <br>- 팀: PM 1명 + 현장 대표 1명
+            <br>- 제약: 기존 시스템과 호환되어야 함
+            <br>
+            <br>필요한 문서:
+            <br>1. 현장 데이터 수집 양식 (엑셀)
+            <br>2. AI 알고리즘 설계서 (10페이지)
+            <br>3. 예외 상황 매뉴얼 (사용자 가이드 형식)
+            <br>4. 테스트 시나리오 100개 (케이스별)
+            <br>5. 최종 보고서 템플릿 (PPT)
+            <br>
+            <br>먼저 1번(데이터 수집 양식)부터 만들어주세요.
+            <br>
+            <br>양식 요구사항:
+            <br>- 수집 항목: 날짜, 시간, 물량, 오류 유형, 오류 원인, 처리 시간, 담당자
+            <br>- 자동 계산: 일일 총물량, 오류율(%), 평균 처리 시간
+            <br>- 시각화: 일별 물량 그래프, 오류 유형 파이차트
+            <br>- 사용자: 현장 직원 (엑셀 초보자 수준)
+            <br>
+            <br>현장 직원이 쉽게 입력할 수 있도록 드롭다운, 자동완성 기능 포함해주세요.
+        </div>
+    </div>
+
+    <p>30초 후.</p>
+
+    <div class="email-box">
+        <p><strong>Claude 답변</strong>:</p>
+        <div class="prompt-code">
+            물류 센터 데이터 수집 양식을 설계했습니다.
+            <br>
+            <br>### 시트 구성
+            <br>
+            <br><strong>Sheet 1: 일일 기록</strong>
+            <br>| 날짜 | 시간대 | 물량 | 오류건수 | 오류유형 | 오류원인 | 처리시간(분) | 담당자 |
+            <br>|------|--------|------|----------|----------|----------|-------------|--------|
+            <br>| 2024-11-19 | 02:00-06:00 | 14,203 | [드롭다운] | [드롭다운] | [드롭다운] | 5 | [드롭다운] |
+            <br>
+            <br><strong>드롭다운 옵션</strong>:
+            <br>- 오류유형: 바코드 불량, 센서 오류, 물량 초과, 기타
+            <br>- 오류원인: 습도, 먼지, 인력 부족, 시스템 오류, 불명
+            <br>- 담당자: 최도진, 김택배, 이현장, 박물류
+            <br>
+            <br><strong>Sheet 2: 자동 계산</strong>
+            <br>- 일일 총물량: =SUM(C:C)
+            <br>- 오류율(%): =오류건수/물량*100
+            <br>- 평균 처리시간: =AVERAGE(G:G)
+            <br>
+            <br><strong>Sheet 3: 시각화</strong>
+            <br>- 일별 물량 라인 그래프
+            <br>- 오류 유형 파이차트
+            <br>- 주간 트렌드 분석
+            <br>
+            <br>### 사용자 편의 기능
+            <br>1. 데이터 유효성 검사로 입력 오류 방지
+            <br>2. 조건부 서식으로 오류율 5% 초과 시 빨간색 표시
+            <br>3. 자동 날짜 입력 (TODAY() 함수)
+            <br>4. 템플릿 보호 (수식 셀 잠금)
+            <br>
+            <br>파일을 만들까요? 추가 요구사항 있으면 말씀해주세요.
+        </div>
+    </div>
+
+    <p>서윤은 화면을 봤다.</p>
+    <p>30초 만에 전체 구조가 나왔다.</p>
+    <p>혼자 했으면 반나절 걸렸을 것이다.</p>
+    <p>"이거... 진짜 빠르네요."</p>
+    <p>도진이 놀란 표정으로 봤다.</p>
+    <p>"저것만 만드는 데 보통 얼마나 걸려요?"</p>
+    <p>"혼자 하면 4-5시간이요. 근데 이건 30초."</p>
+    <p>"...대박."</p>
+    <p>서윤이 계속 입력했다.</p>
+
+    <div class="email-box">
+        <p><strong>서윤의 후속 프롬프트</strong>:</p>
+        <div class="prompt-code">
+            좋습니다. 이제 Sheet 1의 실제 엑셀 수식을 알려주세요.
+            <br>
+            <br>그리고 조건부 서식 규칙도 구체적으로:
+            <br>- 오류율 5% 이상: 빨간색
+            <br>- 오류율 3-5%: 노란색
+            <br>- 오류율 3% 미만: 초록색
+            <br>
+            <br>수식은 복사-붙여넣기 가능하게 작성해주세요.
+        </div>
+    </div>
+
+    <p>Claude가 즉시 답했다.</p>
+    <p>수식, 조건부 서식 규칙, 드롭다운 설정 방법까지.</p>
+    <p>모두 복사-붙여넣기 가능한 형식으로.</p>
+    <p>서윤은 엑셀을 열었다.</p>
+    <p>Claude가 준 수식을 붙여넣었다.</p>
+    <p>5분 만에 완성.</p>
+
+    <h3 id="scene-4">📊 완성된 엑셀 템플릿</h3>
+    <video class="scene-video" src="04.mp4" controls autoplay title="화면에 뜬 데이터 수집 양식. 드롭다운, 자동 계산, 그래프가 모두 작동한다."></video>
+    <div class="caption">화면에 뜬 데이터 수집 양식. 드롭다운, 자동 계산, 그래프가 모두 작동한다.</div>
+
+    <p>"됐어요."</p>
+    <p>서윤이 노트북을 돌렸다.</p>
+    <p>도진이 봤다.</p>
+    <p>"이거... 진짜 쓸 만한데요?"</p>
+    <p>"테스트해보세요."</p>
+    <p>도진이 데이터를 입력했다.</p>
+    <p>날짜, 물량, 오류.</p>
+    <p>자동으로 계산됐다. 그래프가 그려졌다. 오류율이 4.5%라 노란색으로 표시됐다.</p>
+    <p>"와..."</p>
+    <p>도진이 웃었다.</p>
+    <p>"이거 현장에서 바로 쓸 수 있겠는데요?"</p>
+    <p>"그럼 다음 거 만들까요?"</p>
+    <p>"뭐요?"</p>
+    <p>"예외 상황 매뉴얼이요. 도진 대리님 경험을 문서로 만드는 거요."</p>
+    <p>"제 경험을요?"</p>
+    <p>"네. 8년 동안 겪은 예외 상황이요. 센서 오류, 물량 급증, 인력 부족. 그런 거요."</p>
+    <p>"그런 걸 어떻게 문서로 만들어요?"</p>
+    <p>"Claude한테 물어보면 돼요."</p>
+    <p>서윤이 다시 입력하기 시작했다.</p>
+
+    <h3 id="scene-5">😮 도진의 놀람</h3>
+    <video class="scene-video" src="05.mp4" controls autoplay title="도진이 화면을 본다. 놀람과 기대가 섞인 표정. '이걸로 정말 2주에 할 수 있을까?'"></video>
+    <div class="caption">도진이 화면을 본다. 놀람과 기대가 섞인 표정. "이걸로 정말 2주에 할 수 있을까?"</div>
+
+    <div class="email-box">
+        <p><strong>서윤의 프롬프트</strong>:</p>
+        <div class="prompt-code">
+            현장 베테랑의 경험을 예외 상황 매뉴얼로 정리하려고 합니다.
+            <br>
+            <br>대상 독자: 신입 현장 직원
+            <br>목적: AI가 처리 못하는 15% 예외 상황 대응 가이드
+            <br>
+            <br>인터뷰 기반으로 작성할 예정입니다.
+            <br>베테랑에게 어떤 질문을 해야 좋은 매뉴얼이 나올까요?
+            <br>
+            <br>질문 리스트를 만들어주세요:
+            <br>- 카테고리별로 분류 (센서 오류, 물량 문제, 인력 문제 등)
+            <br>- 각 카테고리당 5-7개 질문
+            <br>- 실무 경험 추출에 최적화된 질문
+        </div>
+    </div>
+
+    <p>Claude가 답했다.</p>
+    <p>질문 리스트 50개.</p>
+    <p>카테고리별로 분류되어 있었다.</p>
+    <p>"센서 오류 발생 시 가장 먼저 확인하는 것은?"</p>
+    <p>"물량이 예측의 2배 왔을 때 어떻게 대응하나요?"</p>
+    <p>"신입이 가장 자주 하는 실수는?"</p>
+    <p>도진이 리스트를 봤다.</p>
+    <p>"이거... 다 현장에서 실제로 일어나는 일인데요."</p>
+    <p>"그럼 답변해주시면 제가 매뉴얼로 만들게요."</p>
+    <p>"지금요?"</p>
+    <p>"네. 지금. 2주밖에 없어요."</p>
+    <p>도진이 웃었다.</p>
+    <p>"알겠습니다. 하죠."</p>
+    <p>서윤이 노트북을 열었다.</p>
+    <p>도진이 답변하기 시작했다.</p>
+    <p>Claude가 정리했다.</p>
+    <p>30분 후.</p>
+    <p>예외 상황 매뉴얼 초안이 완성됐다.</p>
+
+    <div class="separator"></div>
+
+    <p>오후 6시.</p>
+    <p>서윤과 도진은 여전히 구내식당에 있었다.</p>
+    <p>노트북 2대. 커피 5잔. 완성된 문서 3개.</p>
+    <ol>
+        <li>✅ 데이터 수집 양식</li>
+        <li>✅ 예외 상황 매뉴얼 (초안)</li>
+        <li>✅ 테스트 시나리오 30개</li>
+    </ol>
+    <p>"오늘 하루에 이만큼 했네요."</p>
+    <p>도진이 놀란 표정으로 말했다.</p>
+    <p>"Claude 없었으면 일주일 걸렸을 거예요."</p>
+    <p>서윤이 화면을 저장했다.</p>
+    <p>"내일은 알고리즘 설계 문서 만들어요. 모레는 시스템 통합 계획서."</p>
+    <p>"진짜 2주에 가능하겠는데요?"</p>
+    <p>"가능하게 만들 거예요."</p>
+    <p>서윤이 가방을 챙겼다.</p>
+    <p>"도진 대리님."</p>
+    <p>"네."</p>
+    <p>"AI가 사람을 대체한다고 생각했어요. 처음엔."</p>
+    <p>"...네."</p>
+    <p>"근데 아니더라고요. AI는 도구예요. 우리를 빠르게 만드는."</p>
+    <p>도진이 고개를 끄덕였다.</p>
+    <p>"85%는 AI가 하고, 15%는 우리가 한다. 근데 그 15%를 만드는 데도 AI를 쓴다."</p>
+    <p>"맞아요. 그게 진짜 AI 활용이에요."</p>
+    <p>두 사람이 건물을 나섰다.</p>
+    <p>저녁 하늘이 어두웠다.</p>
+    <p>2주.</p>
+    <p>싸움이 시작됐다.</p>
+
+    <h3 id="scene-6">🚪 퇴근하는 두 사람</h3>
+    <video class="scene-video" src="06.mp4" controls autoplay title="본사 건물을 나서는 서윤과 도진. 어둑한 저녁. 노트북 가방을 든 두 사람의 뒷모습."></video>
+    <div class="caption">본사 건물을 나서는 서윤과 도진. 어둑한 저녁. 노트북 가방을 든 두 사람의 뒷모습.</div>
+
+    <div class="separator"></div>
+    <p style="text-align: center; font-size: 0.9em; color: #777;">**[Episode 5 끝]**</p>
+    <p style="text-align: center; font-size: 0.9em; color: #777; margin-top: 5px;">*다음 에피소드 예고: 프롬프트 엔지니어링, 현장을 바꾸다.*</p>
+
+    <div class="separator"></div>
+
+    <div class="ai-guide">
+        <h2>💡 Hands-On Tutorial 1: 서윤의 프로젝트 문서 자동화 프롬프트</h2>
+        
+        <p><strong>Real-world situation</strong>: 짧은 기간 안에 여러 프로젝트 문서를 만들어야 할 때</p>
+        
+        <p><strong>What the protagonist did</strong>: 서윤은 2주 안에 6개 문서를 만들어야 했고, Claude에게 체계적으로 요청해서 30초~5분 만에 각 문서의 구조와 내용을 얻었습니다.</p>
+
+        <p><strong>Copy-paste prompt</strong>:</p>
+        <div class="prompt-code">
+            나는 {프로젝트명}에서 {문서명}을 {기간} 안에 만들어야 합니다.
+            <br>
+            <br>프로젝트 정보:
+            <br>- 목표: {구체적인 목표}
+            <br>- 기간: {날짜/주}
+            <br>- 팀 구성: {인원 및 역할}
+            <br>- 제약 조건: {기술적/비즈니스적 제약}
+            <br>
+            <br>문서 요구사항:
+            <br>- 목적: {이 문서로 무엇을 하려는가}
+            <br>- 대상 독자: {누가 이 문서를 사용하는가}
+            <br>- 필수 포함 항목: {반드시 들어가야 할 내용}
+            <br>- 형식: {엑셀/워드/PPT 등}
+            <br>
+            <br>먼저 이 문서의 전체 구조(목차/섹션/항목)를 제안해주세요.
+            <br>구조가 확정되면 각 섹션의 구체적인 내용을 작성하겠습니다.
+            <br>
+            <br>사용자 레벨: {초보자/중급자/전문가}를 고려해서 만들어주세요.
+        </div>
+        <p><strong>What you'll get</strong>:
+        <br>- 문서 전체 구조 (목차/섹션)
+        <br>- 각 섹션에 들어갈 항목 리스트
+        <br>- 우선순위별 작성 순서 제안</p>
+
+        <p><strong>Try it yourself</strong>:</p>
+        <ul>
+            <li>[ ] 만들어야 할 문서 1개 선택</li>
+            <li>[ ] {중괄호} 부분을 실제 프로젝트 정보로 교체</li>
+            <li>[ ] Claude에 입력</li>
+            <li>[ ] 제안된 구조 검토 후 수정 요청</li>
+            <li>[ ] 구조 확정 후 "이제 1번 섹션 작성해줘" 요청</li>
+        </ul>
+        
+        <p><strong>Example result</strong>:</p>
+        <div class="prompt-code">
+            프로젝트: 물류 AI 하이브리드 시스템
+            <br>문서: 데이터 수집 양식 (엑셀)
+            <br>사용자: 현장 직원 (엑셀 초보자)
+            <br>
+            <br>=== Claude 답변 ===
+            <br>
+            <br>### 문서 구조
+            <br>
+            <br>**Sheet 1: 일일 기록** (메인 입력 시트)
+            <br>- 날짜 (자동)
+            <br>- 시간대 (드롭다운: 02:00-06:00, 06:00-10:00...)
+            <br>- 물량 (숫자 입력)
+            <br>- 오류건수 (숫자 입력)
+            <br>- 오류유형 (드롭다운: 4가지)
+            <br>- 오류원인 (드롭다운: 5가지)
+            <br>- 처리시간 (분 단위)
+            <br>- 담당자 (드롭다운)
+            <br>
+            <br>... (중략)
+            <br>
+            <br>다음 단계: Sheet 1의 구체적인 수식을 작성할까요?
+        </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="ai-guide">
+        <h2>💡 Hands-On Tutorial 2: 도진의 전문가 지식 추출 프롬프트</h2>
+        
+        <p><strong>Real-world situation</strong>: 베테랑 직원의 암묵지(tacit knowledge)를 명시적 매뉴얼로 만들어야 할 때</p>
+        
+        <p><strong>What the protagonist did</strong>: 도진의 8년 현장 경험을 매뉴얼로 만들기 위해, 서윤은 먼저 Claude에게 "어떤 질문을 해야 하는지" 물어본 후, 그 질문으로 인터뷰하고 답변을 다시 Claude에게 정리시켰습니다.</p>
+
+        <p><strong>Copy-paste prompt (1단계: 질문 리스트 생성)</strong>:</p>
+        <div class="prompt-code">
+            {분야} 베테랑의 경험을 {문서 유형}으로 만들려고 합니다.
+            <br>
+            <br>배경 정보:
+            <br>- 베테랑 프로필: {경력/역할/전문 분야}
+            <br>- 목적: {이 지식을 왜 문서화하는가}
+            <br>- 대상 독자: {신입/중급자/타부서 등}
+            <br>- 중점 영역: {어떤 지식이 가장 중요한가}
+            <br>
+            <br>다음을 만들어주세요:
+            <br>
+            <br>1. 인터뷰 질문 리스트 (30-50개)
+            <br>   - 카테고리별 분류
+            <br>   - 각 카테고리당 5-7개 질문
+            <br>   - 구체적 사례 도출에 최적화
+            <br>   
+            <br>2. 질문 우선순위
+            <br>   - 꼭 물어봐야 할 질문 (필수)
+            <br>   - 시간 있으면 물어볼 질문 (선택)
+            <br>
+            <br>3. 질문 기법 팁
+            <br>   - 추상적 답변을 구체적으로 유도하는 방법
+            <br>   - 숨겨진 노하우를 끌어내는 방법
+            <br>
+            <br>형식: 복사-붙여넣기 가능한 체크리스트로 만들어주세요.
+        </div>
+
+        <p><strong>Copy-paste prompt (2단계: 답변 정리)</strong>:</p>
+        <div class="prompt-code">
+            베테랑과 인터뷰한 내용을 {문서 유형}으로 정리해주세요.
+            <br>
+            <br>인터뷰 내용:
+            <br>[질문1] {질문 내용}
+            <br>[답변1] {베테랑의 답변 - 원문 그대로 붙여넣기}
+            <br>
+            <br>(모든 Q&A 붙여넣기)
+            <br>
+            <br>요구사항:
+            <br>- 구어체 → 문어체로 변환
+            <br>- 중복 내용 제거 및 통합
+            <br>- 카테고리별로 재구성
+            <br>- 신입이 이해하기 쉽게 예시 추가
+            <br>- 단계별 실행 가이드 형식으로
+        </div>
+        <p><strong>What you'll get</strong>:
+        <br>- 1단계: 체계적인 질문 리스트
+        <br>- 2단계: 정리된 매뉴얼 (초안)</p>
+
+        <p><strong>Try it yourself</strong>:</p>
+        <ul>
+            <li>[ ] 베테랑 직원 1명 섭외</li>
+            <li>[ ] 1단계 프롬프트로 질문 리스트 받기</li>
+            <li>[ ] 질문 리스트로 인터뷰 (30분~1시간)</li>
+            <li>[ ] 인터뷰 내용을 2단계 프롬프트에 붙여넣기</li>
+            <li>[ ] 결과물을 베테랑에게 검증받기</li>
+        </ul>
+        
+        <p><strong>Example result</strong>:</p>
+        <div class="prompt-code">
+            === 2단계: 정리된 매뉴얼 ===
+            <br>
+            <br>## 센서 오류 대응
+            <br>
+            <br>### 상황
+            <br>새벽 3-4시 사이, 습도 60% 이상일 때 E-7342 오류 빈발
+            <br>
+            <br>### 징후
+            <br>- 3일 연속 같은 시간대 오류
+            <br>- 날씨가 흐리거나 비 온 다음 날
+            <br>- 물량 피크 타임과 겹칠 때
+            <br>
+            <br>... (중략)
+        </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="ai-guide" style="background-color: #ffe6e6; border-left: 5px solid #c00;">
+        <h2>🎯 Learning Concept: "Don't Think, Do AI" - Level 2</h2>
+
+        <p><strong>Concept</strong>: <span class="highlight">**"AI에게 AI 사용법을 물어라"**</span></p>
+        <p>서윤은 "어떤 질문을 해야 좋은 매뉴얼이 나올까요?"라고 Claude에게 물었습니다. 이것이 Level 2의 핵심입니다.</p>
+
+        <p><strong>Before (비효율적)</strong>:</p>
+        <div class="prompt-code">
+            인간: 도진 대리님, 센서 오류 어떻게 처리해요?
+            <br>도진: 음... 그냥 봐요. 경험으로 아는 거라...
+            <br>인간: (막막함) 어떻게 문서로 만들지?
+        </div>
+
+        <p><strong>After (AI 활용)</strong>:</p>
+        <div class="prompt-code">
+            1단계: Claude에게 질문 리스트 요청
+            <br>2단계: 그 질문으로 도진 인터뷰
+            <br>3단계: 답변을 Claude에게 정리 요청
+            <br>→ 30분 만에 체계적 매뉴얼 완성
+        </div>
+
+        <p><strong>Why it matters</strong>:</p>
+        <ul>
+            <li>AI는 "좋은 질문"을 만드는 데 탁월합니다</li>
+            <li>베테랑의 암묵지 → AI의 구조화 → 명시적 매뉴얼</li>
+            <li>인터뷰 시간 1/3 단축 (불필요한 질문 제거)</li>
+        </ul>
+        
+        <p><strong>Next level preview</strong>:<br>Episode 6에서 도진이 직접 Claude를 사용하며 "현장 언어"를 AI에게 가르치게 됩니다.</p>
+    </div>
+
+</body>
+</html>
