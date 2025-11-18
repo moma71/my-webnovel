@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do, 85% - Web Novel</title>
     <link rel="stylesheet" href="style.css">
-    </head>
 
+    <style>
+        /* 에피소드 상태 스타일 */
+        .episode-draft {
+            opacity: 0.5;
+        }
+        .episode-draft::after {
+            content: " (작성중)";
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+
+</head>
 <body>
 
     <header class="site-header">
@@ -21,9 +33,7 @@
             </nav>
             
             <button class="nav-toggle" aria-controls="main-menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </header>
@@ -36,25 +46,46 @@
 
     <section id="episodes" class="container episode-section">
         <div class="episode-title">📖 에피소드 목록</div>
-
-        <div class="episode-grid">
-            <a class="episode-btn" href="episode1/index.html">Episode 1</a>
-            <a class="episode-btn" href="episode2/index.html">Episode 2</a>
-            <a class="episode-btn" href="episode3/index.html">Episode 3</a>
-            <a class="episode-btn" href="episode4/index.html">Episode 4</a>
-            <a class="episode-btn" href="episode5/index.html">Episode 5</a>
-            <a class="episode-btn" href="episode6/index.html">Episode 6</a>
-            <a class="episode-btn" href="episode7/index.html">Episode 7</a>
-        </div>
+        <div id="episode-grid" class="episode-grid"></div>
     </section>
 
     <script>
-        // 햄버거 메뉴 토글 로직
+        // 자동 Episode 버튼 생성 로직
+        const maxEpisodes = 20; // 원하는 숫자까지 자동 생성
+        const grid = document.getElementById("episode-grid");
+
+        for (let i = 1; i <= maxEpisodes; i++) {
+
+            const episodePath = `episode${i}/index.html`;
+
+            // 생성 버튼
+            const link = document.createElement("a");
+            link.className = "episode-btn";
+            link.textContent = `Episode ${i}`;
+            link.href = episodePath;
+
+            // fetch로 파일 존재 여부 확인
+            fetch(episodePath, { method: "HEAD" })
+                .then(response => {
+                    if (!response.ok) {
+                        link.classList.add("episode-draft");
+                        link.href = "#"; 
+                    }
+                })
+                .catch(() => {
+                    link.classList.add("episode-draft");
+                    link.href = "#";
+                });
+
+            grid.appendChild(link);
+        }
+
+        // 모바일 메뉴
         const toggleButton = document.querySelector('.nav-toggle');
         const mainNav = document.getElementById('main-menu');
         
         toggleButton.addEventListener('click', () => {
-            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
             toggleButton.setAttribute('aria-expanded', !isExpanded);
             mainNav.classList.toggle('show');
         });
