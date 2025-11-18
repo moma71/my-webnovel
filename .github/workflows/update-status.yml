@@ -1,0 +1,26 @@
+name: Update Episode Status
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  update-status:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run update-status.sh
+        run: |
+          chmod +x update-status.sh
+          ./update-status.sh
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add README.md episode-status.md
+          git commit -m "자동 상태 업데이트" || echo "No changes"
+          git push
