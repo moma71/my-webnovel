@@ -1,89 +1,116 @@
 #!/bin/bash
 
-echo "🔄 Updating episode status..."
+echo "🔧 update-status.sh start"
 
-# ------------------------------------------
-# 1) Episode 폴더 목록 수집
-# ------------------------------------------
+###############################################
+# 1) Episode 상태 스캔 (완료 / 작성중 판단)
+###############################################
 
-episodes=()
-for dir in episode*/ ; do
-  if [[ $dir =~ episode([0-9]+) ]]; then
-    episodes+=("${BASH_REMATCH[1]}")
+EPISODE_STATUS=""
+COMPLETED_LIST=()
+
+for i in {1..20}; do
+  FOLDER="episode$i"
+  FILE="$FOLDER/index.html"
+
+  if [[ -f "$FILE" ]]; then
+    CONTENT=$(cat "$FILE")
+
+    if [[ -z "$CONTENT" ]] || [[ "$CONTENT" == *"작성중"* ]]; then
+      STATUS="⏳ 작성중"
+    else
+      STATUS="✅ 완료"
+      COMPLETED_LIST+=($i)
+    fi
+  else
+    STATUS="⏳ 작성중"
+  fi
+
+  EPISODE_STATUS+="| Episode $i | $STATUS |\n"
+done
+
+
+###############################################
+# 2) episode-status.md 자동 생성
+###############################################
+
+echo "📝 Writing episode-status.md"
+cat > episode-status.md <<EOF
+# Episode Status
+
+| Episode | Status |
+|--------:|:------:|
+$(echo -e "$EPISODE_STATUS")
+EOF
+
+
+###############################################
+# 3) README.md 제작 현황 자동 업데이트
+###############################################
+
+echo "📝 Updating README.md statuses"
+
+README_TABLE=$(echo -e "$EPISODE_STATUS")
+
+# 완료 구간 계산
+if [[ ${#COMPLETED_LIST[@]} -gt 0 ]]; then
+  FIRST=${COMPLETED_LIST[0]}
+  LAST=${COMPLETED_LIST[-1]}
+  COMPLETE_RANGE="Episode ${FIRST}~${LAST}까지 완료, 20화까지 제작 예정입니다."
+else
+  COMPLETE_RANGE="아직 완료된 에피소드가 없습니다."
+fi
+
+# README 갱신
+awk -v table="$README_TABLE" -v range="$COMPLETE_RANGE" '
+  BEGIN { in_table=0 }
+  /Episode [0-9]+~[0-9]+까지 완료/ {
+    print range
+    next
+  }
+  /^## ✔ 에피소드 제작 현황/ { 
+    print; getline; print ""; print "| Episode | Status |"; print "|--------:|:------:|"
+    in_table=1; next 
+  }
+  in_table==1 && /^\| Episode/ { next }
+  in_table==1 && NF==0 { 
+    print table
+    in_table=0
+    next
+  }
+  { print }
+' README.md > README_tmp.md
+
+mv README_tmp.md README.md
+
+
+###############################################
+# 4) index.html 자동 버튼 상태 갱신 (draft 처리)
+###############################################
+
+echo "📝 Updating index.html auto buttons area"
+
+AUTO_BUTTONS=""
+
+for i in {1..20}; do
+  if [[ " ${COMPLETED_LIST[*]} " == *" $i "* ]]; then
+    AUTO_BUTTONS+="  <a class=\"ep-btn\" href=\"episode$i/index.html\">Episode $i</a>\n"
+  else
+    AUTO_BUTTONS+="  <a class=\"ep-btn draft\" href=\"episode$i/index.html\">Episode $i</a>\n"
   fi
 done
 
-# 번호 정렬
-IFS=$'\n' episodes=($(sort -n <<<"${episodes[*]}"))
-unset IFS
+# index.html 치환
+sed -i.bak "/AUTO_EPISODE_BUTTONS_START/,/AUTO_EPISODE_BUTTONS_END/c\
+<!-- AUTO_EPISODE_BUTTONS_START -->\
+$AUTO_BUTTONS<!-- AUTO_EPISODE_BUTTONS_END -->
+" index.html
 
-# ------------------------------------------
-# 2) episode-status.md 생성
-# ------------------------------------------
+rm -f index.html.bak
 
-echo "📄 Updating episode-status.md"
 
-{
-  echo "| Episode | Status |"
-  echo "|--------|--------|"
-  for ep in "${episodes[@]}"; do
-    if [[ -f "episode$ep/index.html" ]]; then
-      echo "| Episode $ep | 완료 |"
-    else
-      echo "| Episode $ep | 작성중 |"
-    fi
-  done
-} > episode-status.md
+###############################################
+# Finish
+###############################################
 
-# ------------------------------------------
-# 3) README.md 업데이트
-# ------------------------------------------
-
-completed=$(find . -maxdepth 2 -name "index.html" -path "./episode*/index.html" | wc -l)
-
-echo "📄 Updating README.md (완료: $completed)"
-
-# Episode 상태 표가 시작되는 라인 이후를 재작성
-sed -i "/^## ✔ 에피소드 제작 현황$/q" README.md
-
-{
-  echo ""
-  echo "| Episode | Status |"
-  echo "|--------|--------|"
-  for ep in "${episodes[@]}"; do
-    if [[ -f "episode$ep/index.html" ]]; then
-      echo "| Episode $ep | 완료 |"
-    else
-      echo "| Episode $ep | 작성중 |"
-    fi
-  done
-} >> README.md
-
-# ------------------------------------------
-# 4) index.html Episode 버튼 자동 생성
-# ------------------------------------------
-
-echo "🌐 Updating index.html episode buttons..."
-
-buttons=""
-for ep in "${episodes[@]}"; do
-  buttons+="  <a href=\"episode$ep/index.html\" class=\"ep-btn\">Episode $ep</a>\n"
-done
-
-# 마커 영역 교체
-awk -v buttons="$buttons" '
-  /<!-- AUTO_EPISODE_BUTTONS_START -->/ {
-    print;
-    print buttons;
-    skip=1;
-    next;
-  }
-  /<!-- AUTO_EPISODE_BUTTONS_END -->/ {
-    skip=0;
-  }
-  skip==0 { print }
-' index.html > index_tmp.html
-
-mv index_tmp.html index.html
-
-echo "✅ All updates done!"
+echo "✅ update-status.sh finished"
