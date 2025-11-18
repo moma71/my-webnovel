@@ -13,7 +13,11 @@
             <div class="brand">
                 <a href="../index.html" class="logo">📘 Do, 85%</a> 
             </div>
-            
+              <!-- ✅ 햄버거 버튼 추가 -->
+    <button class="nav-toggle" id="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
             <nav class="main-nav" id="main-menu">
                 <a href="../index.html">Home</a>
                 <a href="../about.html">About</a>
@@ -613,6 +617,9 @@
             toggleButton.setAttribute('aria-expanded', !isExpanded);
             mainNav.classList.toggle('show');
         });
+        document.getElementById("nav-toggle").addEventListener("click", function () {
+    document.getElementById("main-nav").classList.toggle("show");
+});
     </script>
 </body>
 </html>

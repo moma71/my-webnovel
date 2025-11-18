@@ -7,9 +7,6 @@ Episode 1~20까지 순차 제작 중입니다.
 
 ## ✔ 에피소드 제작 현황
 
-| Episode | Status |
-|--------:|:------:|
-<<<<<<< HEAD
 |    Episode | Status |
 | ---------: | :----: |
 |  Episode 1 |  완료  |
@@ -21,26 +18,18 @@ Episode 1~20까지 순차 제작 중입니다.
 |  Episode 7 |  완료  |
 |  Episode 8 |  완료  |
 |  Episode 9 | 작성중 |
-| Episode 1 | ✅ 완료 |
-| Episode 2 | ✅ 완료 |
-| Episode 3 | ✅ 완료 |
-| Episode 4 | ✅ 완료 |
-| Episode 5 | ✅ 완료 |
-| Episode 6 | ✅ 완료 |
-| Episode 7 | ✅ 완료 |
-| Episode 8 | ✅ 완료 |
-| Episode 9 | ⏳ 작성중 |
-| Episode 10 | ⏳ 작성중 |
-| Episode 11 | ⏳ 작성중 |
-| Episode 12 | ⏳ 작성중 |
-| Episode 13 | ⏳ 작성중 |
-| Episode 14 | ⏳ 작성중 |
-| Episode 15 | ⏳ 작성중 |
-| Episode 16 | ⏳ 작성중 |
-| Episode 17 | ⏳ 작성중 |
-| Episode 18 | ⏳ 작성중 |
-| Episode 19 | ⏳ 작성중 |
-| Episode 20 | ⏳ 작성중 |
+| Episode 10 | 작성중 |
+| Episode 11 | 작성중 |
+| Episode 12 | 작성중 |
+| Episode 13 | 작성중 |
+| Episode 14 | 작성중 |
+| Episode 15 | 작성중 |
+| Episode 16 | 작성중 |
+| Episode 17 | 작성중 |
+| Episode 18 | 작성중 |
+| Episode 19 | 작성중 |
+| Episode 20 | 작성중 |
+
 ---
 
 ## ✔ 자동 생성 구조
@@ -65,16 +54,3 @@ Episode 1~20까지 순차 제작 중입니다.
 
 📌 사이트 주소:  
 https://moma71.github.io/my-webnovel/
-=======
-| Episode | Status |
-|--------:|:------:|
-<<<<<<< HEAD
-|--------|--------|
-=======
-|--------:|:------:|
-|--------:|:------:|
->>>>>>> 6885dbf (Add full auto README top-range update)
-<<<<<<< HEAD
-=======
->>>>>>> 6885dbf (Add full auto README top-range update)
->>>>>>> 435c7c03b83c1437ad80c3e67c979721f66056c3
