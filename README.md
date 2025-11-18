@@ -7,6 +7,7 @@ Episode 1~20까지 순차 제작 중입니다.
 
 ## ✔ 에피소드 제작 현황
 
+<<<<<<< HEAD
 |    Episode | Status |
 | ---------: | :----: |
 |  Episode 1 |  완료  |
@@ -54,3 +55,16 @@ Episode 1~20까지 순차 제작 중입니다.
 
 📌 사이트 주소:  
 https://moma71.github.io/my-webnovel/
+=======
+| Episode | Status |
+|--------:|:------:|
+<<<<<<< HEAD
+|--------|--------|
+=======
+|--------:|:------:|
+|--------:|:------:|
+>>>>>>> 6885dbf (Add full auto README top-range update)
+<<<<<<< HEAD
+=======
+>>>>>>> 6885dbf (Add full auto README top-range update)
+>>>>>>> 435c7c03b83c1437ad80c3e67c979721f66056c3
