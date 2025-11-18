@@ -7,25 +7,25 @@ Episode 1~5까지 완료, 20화까지 제작 예정입니다.
 
 ## ✔ 에피소드 제작 현황
 
-| Episode      | Status |
-| ------------ | ------ |
-| Episode 1    | 완료   |
-| Episode 2    | 완료   |
-| Episode 3    | 완료   |
-| Episode 4    | 완료   |
-| Episode 5    | 완료   |
-| Episode 6~20 | 작성중 |
-
----
-
-## ✔ 자동 생성 구조
-
-프로젝트는 아래와 같이 구성됩니다: /episode1/index.html /episode2/index.html ...
-/episode20/index.html episode-status.md index.html about.html style.css
-
----
-
-## ✔ GitHub Pages
-
-사이트 주소:  
-https://moma71.github.io/my-webnovel/
+| Episode | Status |
+|--------|--------|
+| Episode 1 | 완료 |
+| Episode 2 | 완료 |
+| Episode 3 | 완료 |
+| Episode 4 | 완료 |
+| Episode 5 | 완료 |
+| Episode 6 | 완료 |
+| Episode 7 | 완료 |
+| Episode 8 | 완료 |
+| Episode 9 | 완료 |
+| Episode 10 | 완료 |
+| Episode 11 | 완료 |
+| Episode 12 | 완료 |
+| Episode 13 | 완료 |
+| Episode 14 | 완료 |
+| Episode 15 | 완료 |
+| Episode 16 | 완료 |
+| Episode 17 | 완료 |
+| Episode 18 | 완료 |
+| Episode 19 | 완료 |
+| Episode 20 | 완료 |
