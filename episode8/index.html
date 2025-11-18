@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do, 85% - CJ대한통운 AI 도입 생존기 (Episode 8)</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="episode-content.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-inner">
+        <div class="brand">
+          <a href="../index.html" class="logo">📘 Do, 85%</a>
+        </div>
+
+        <nav class="main-nav" id="main-menu">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          aria-controls="main-menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="episode-wrapper">
+      <div class="chapter-title">
+        <h1>📦 Do, 85% - CJ대한통운 AI 도입 생존기</h1>
+        <h2>Episode 8: 2주의 기적</h2>
+        <div class="separator"></div>
+      </div>
+
+      <h3 id="scene-1">👀 정민수의 관찰</h3>
+      <div class="media-container" data-media-type="image">
+        <div class="scene-media">
+          <img class="scene-img" src="01.jpeg" alt="11월 26일 화요일, 오후 3시. 본사 회의실. 정민수가 유리창 너머로 지켜봄" loading="lazy">
+        </div>
+        <div class="media-selector" style="display: none; margin-top: 10px;">
+          <label>미디어 선택: </label>
+          <select class="file-selector">
+            <option value="">-- 선택 --</option>
+          </select>
+          <button class="apply-media" style="margin-left: 10px; padding: 5px 15px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer;">적용</button>
+        </div>
+      </div>
+      <div class="caption">
+        11월 26일 화요일, 오후 3시. 본사 회의실. 정민수가 유리창 너머로 지켜봄
+      </div>
+
+      <p>
+        정민수 본부장은 회의실 유리창 너머로 두 사람을 지켜봤다. 구내식당 한쪽
+        구석, 노트북 두 대가 마주 보고 있고, 도진과 서윤이 화면을 번갈아
+        가리키며 무언가를 만들고 있었다.
+      </p>
+      <p>
+        투명성 보고서를 받은 지 이틀. 그는 결정을 내렸다. "2주를 준다. 업무 효율
+        12% 개선을 증명하면 AI 사용을 공식 승인하겠다. 실패하면..." 그는 말을
+        끝맺지 않았다.
+      </p>
+      <p>
+        도진의 노트북 화면에는 Claude가 떠 있었다. 서윤이 프롬프트를 입력했다.
+      </p>
+
+      <h3 id="scene-2">📊 비효율 업무 분석</h3>
+      <div class="media-container" data-media-type="image">
+        <div class="scene-media">
+          <img class="scene-img" src="02.png" alt="Claude 화면 - 비효율 업무 5가지 분석표." loading="lazy">
+        </div>
+        <div class="media-selector" style="display: none; margin-top: 10px;">
+          <label>미디어 선택: </label>
+          <select class="file-selector">
+            <option value="">-- 선택 --</option>
+          </select>
+          <button class="apply-media" style="margin-left: 10px; padding: 5px 15px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer;">적용</button>
+        </div>
+      </div>
+      <div class="caption">비효율 업무 5가지 분석표.</div>
+
+      <div class="email-box">
+        <p><strong>서윤의 프롬프트</strong>:</p>
+        <div class="prompt-code">
+          우리 터미널의 주요 비효율 업무 5가지를 분석해줘. 각 업무별로 소요
+          시간, 반복 빈도, AI로 개선 가능한 부분을 표로 정리해줘.
+        </div>
+      </div>
+
+      <p>30초 후, 완벽한 분석표가 나타났다.</p>
+      <ol>
+        <li>일일 운송 보고서 작성 (50분, 매일)</li>
+        <li>안전사고 보고서 (1시간 20분, 주 2회)</li>
+        <li>설비 점검 체크리스트 (40분, 매일)</li>
+        <li>신입 교육 자료 (3시간, 월 1회)</li>
+        <li>월간 실적 정리 (2시간, 월말)</li>
+      </ol>
+      <p>
+        "일주일에 7시간을..." 도진이 계산기를 두드렸다. "한 달이면 28시간. 거의
+        일주일 업무를 줄일 수 있다는 거잖아."
+      </p>
+      <p>
+        "12%보다 훨씬 높아요." 서윤이 고개를 끄덕였다. "하지만 2주 안에 증명해야
+        해요. 실제로 문서를 만들고, 사람들이 써보고, 결과를 측정해야죠."
+      </p>
+
+      <div class="separator"></div>
+
+      <div class="ai-guide">
+        <h2>💡 Hands-On Tutorial 1: 업무 효율 분석 프롬프트</h2>
+
+        <p>
+          <strong>Real-world situation</strong>: 팀의 비효율적인 업무를 찾고
+          개선 가능성을 분석해야 할 때
+        </p>
+
+        <p><strong>Copy-paste prompt</strong>:</p>
+        <div class="prompt-code">
+          우리 {부서/팀}의 주요 반복 업무를 분석해줘.
+          <br />
+          <br />현재 업무 목록: <br />1. {업무명 1} - 소요시간: {시간}, 빈도:
+          {빈도} <br />2. {업무명 2} - 소요시간: {시간}, 빈도: {빈도} <br />3.
+          {업무명 3} - 소요시간: {시간}, 빈도: {빈도}
+          <br />
+          <br />각 업무에 대해 다음을 분석해줘: <br />- 현재 소요 시간 (분 단위)
+          <br />- 월간 총 소요 시간 <br />- AI 도구로 단축 가능한 시간 (보수적
+          추정) <br />- 구체적인 AI 활용 방법 <br />- 우선순위 (1-5, 높을수록
+          먼저)
+          <br />
+          <br />결과를 표로 정리해줘.
+        </div>
+
+        <p>
+          <strong>What you'll get</strong>: 업무별 개선 가능성과 우선순위가
+          정리된 분석표
+        </p>
+
+        <p><strong>Try it yourself</strong>:</p>
+        <ul>
+          <li>[ ] Copy the prompt above</li>
+          <li>[ ] Replace {placeholders} with your actual work tasks</li>
+          <li>[ ] Paste into Claude</li>
+          <li>[ ] Use the analysis to plan your AI adoption</li>
+        </ul>
+
+        <p><strong>Example result</strong>:</p>
+        <div class="prompt-code">
+          | 업무 | 현재 | 월간 | AI 단축 | 개선률 | 우선순위 |
+          <br />|------|------|------|---------|--------|----------| <br />|
+          일일 보고서 | 50분 | 1,000분 | 600분 | 60% | 5 | <br />| 안전 보고서 |
+          80분 | 640분 | 400분 | 50% | 4 |
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <p>11월 27일 수요일, 새벽 1시. 곤지암 터미널.</p>
+
+      <h3 id="scene-3">💻 도진의 새벽 작업</h3>
+      <div class="media-container" data-media-type="video">
+        <video
+          class="scene-video"
+          src="03.mp4"
+          controls
+          title="혼자 남은 사무실, 노트북 앞의 도진."
+        ></video>
+        
+        <div class="media-selector" style="display: none; margin-top: 10px;">
+          <label>미디어 선택: </label>
+          <select class="file-selector">
+            <option value="">-- 선택 --</option>
+          </select>
+          <button class="apply-media" style="margin-left: 10px; padding: 5px 15px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer;">적용</button>
+        </div>
+      </div>
+      <div class="caption">혼자 남은 사무실, 노트북 앞의 도진.</div>
+
+      <p>
+        도진은 첫 번째 자동화 템플릿을 완성했다. 일일 운송 보고서. 매일 50분씩
+        걸리던 작업이었다.
+      </p>
+
+      <div class="email-box">
+        <p><strong>도진의 프롬프트</strong>:</p>
+        <div class="prompt-code">
+          이 보고서 양식을 보고, 내가 데이터만 입력하면 자동으로 완성되는
+          템플릿을 만들어줘. 엑셀 수식으로.
+        </div>
+      </div>
+
+      <p>
+        5분 후, 스마트 템플릿이 완성됐다. 차량번호, 출발지, 도착지, 화물 정보만
+        입력하면, 나머지 - 운송 시간 계산, 지연 여부 판정, 특이사항 분류, 심지어
+        개선 제안까지 - 는 자동으로 채워졌다.
+      </p>
+      <p>테스트해봤다. 어제 데이터를 입력했다. 8분.</p>
+      <p>
+        "50분이 8분으로..." 도진은 믿기지 않았다. 84% 단축. 그는 파일을
+        저장하고, 서윤에게 카톡을 보냈다. "1번 완성. 내일 현장 테스트."
+      </p>
+      <p>
+        본사 사무실, 서윤도 깨어 있었다. 그녀는 신입 교육 자료를 만들고 있었다.
+        3시간 걸리던 작업.
+      </p>
+
+      <div class="email-box">
+        <p><strong>서윤의 프롬프트</strong>:</p>
+        <div class="prompt-code">
+          [150페이지 안전 매뉴얼 업로드]
+          <br />이 매뉴얼에서 신입이 꼭 알아야 할 핵심 20가지를 뽑아줘. 각
+          항목마다 1) 왜 중요한지, 2) 실수 사례, 3) 체크 포인트를 넣어서 교육
+          자료로 만들어줘.
+        </div>
+      </div>
+
+      <p>20분 후, 완성됐다.</p>
+      <p>
+        서윤은 도진의 메시지를 보고 답장을 보냈다. "2번도 완성. 신입들 반응
+        보자."
+      </p>
+
+      <div class="separator"></div>
+
+      <p>11월 28일 목요일, 오전 10시.</p>
+
+      <h3 id="scene-4">😮 김택배의 놀람</h3>
+      <div class="media-container" data-media-type="video">
+        <video
+          class="scene-video"
+          src="ep08_img04_taekbae_surprised.mp4"
+          controls
+          title="보고서를 보며 믿기지 않는 표정의 김택배."
+        ></video>
+        <div class="media-selector" style="display: none; margin-top: 10px;">
+          <label>미디어 선택: </label>
+          <select class="file-selector">
+            <option value="">-- 선택 --</option>
+          </select>
+          <button class="apply-media" style="margin-left: 10px; padding: 5px 15px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer;">적용</button>
+        </div>
+      </div>
+      <div class="caption">보고서를 보며 믿기지 않는 표정의 김택배.</div>
+
+      <p>
+        "이거... 진짜 8분 만에 만든 거예요?" 김택배가 도진이 건넨 보고서를
+        뚫어져라 봤다.
+      </p>
+      <p>
+        "어제 데이터로 테스트한 거야. 형이 직접 해봐." 도진이 노트북을 밀었다.
+      </p>
+      <p>
+        김택배가 오늘 아침 데이터를 입력했다. 차량 15대 정보. 타이핑만 6분, 자동
+        계산 2분. 총 8분.
+      </p>
+      <p>
+        "이게 맞아?" 김택배는 자기가 어제 50분 걸려 만든 보고서와 비교했다.
+        내용이 똑같았다. 아니, 더 정확했다. 운송시간 계산에 실수가 없었고, 지연
+        사유 분류가 더 체계적이었다.
+      </p>
+      <p>
+        "AI가 계산을 대신해준 거예요." 도진이 설명했다. "형은 데이터만 입력하면
+        돼요. 나머지는 템플릿이 알아서."
+      </p>
+      <p>"그럼 나한테 남는 시간이..." 김택배가 계산했다. "하루 40분?"</p>
+      <p>
+        "일주일이면 3시간 반." 도진이 고개를 끄덕였다. "그 시간에 형이 더 중요한
+        일 하면 돼요."
+      </p>
+      <p>김택배는 처음으로 웃었다. "좋네. 이거."</p>
+      <p>본사, 서윤은 작년에 입사한 박신입에게 교육 자료를 보여줬다.</p>
+
+      <h3 id="scene-5">📚 신입 교육의 혁신</h3>
+      <div class="media-container" data-media-type="image">
+        <div class="scene-media">
+          <img class="scene-img" src="ep08_img05_training.jpeg" alt="20페이지 요약본을 건네는 서윤." loading="lazy">
+        </div>
+        <div class="media-selector" style="display: none; margin-top: 10px;">
+          <label>미디어 선택: </label>
+          <select class="file-selector">
+            <option value="">-- 선택 --</option>
+          </select>
+          <button class="apply-media" style="margin-left: 10px; padding: 5px 15px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer;">적용</button>
+        </div>
+      </div>
+      <div class="caption">20페이지 요약본을 건네는 서윤.</div>
+
+      <p>"150페이지를 어떻게 다 읽어요..." 박신입의 얼굴이 어두워졌다.</p>
+      <p>
+        "안 읽어도 돼요." 서윤이 20페이지 요약본을 건넸다. "핵심만 뽑았어요.
+        이것만 외우면 현장에서 실수 안 해요."
+      </p>
+      <p>
+        박신입이 읽기 시작했다. 5분 후, "아, 이거 진짜 중요한 것들만 있네요.
+        지난주에 제가 실수한 게 여기 3번에 있어요."
+      </p>
+      <p>
+        "그치? 실전 중심이에요." 서윤이 웃었다. "3시간 교육이 30분으로 줄었어요.
+        남은 시간엔 실습해요."
+      </p>
+
+      <div class="separator"></div>
+
+      <div class="ai-guide">
+        <h2>💡 Hands-On Tutorial 2: 긴 문서 핵심 추출 프롬프트</h2>
+
+        <p>
+          <strong>Real-world situation</strong>: 100페이지가 넘는 매뉴얼,
+          보고서, 계약서에서 핵심만 빠르게 파악해야 할 때
+        </p>
+
+        <p><strong>Copy-paste prompt</strong>:</p>
+        <div class="prompt-code">
+          [문서 업로드 또는 텍스트 붙여넣기]
+          <br />
+          <br />이 문서에서 {타겟 독자}가 꼭 알아야 할 핵심 {N}가지를 추출해줘.
+          <br />
+          <br />각 항목마다 다음 형식으로: <br />1. [핵심 내용 한 문장] <br />
+          - 왜 중요한가: [이유] <br />
+          - 실수하면: [결과] <br />
+          - 체크 포인트: [확인 사항]
+          <br />
+          <br />{추가 요구사항}
+        </div>
+
+        <p>
+          <strong>What you'll get</strong>: 긴 문서가 실행 가능한 체크리스트로
+          변환됨
+        </p>
+
+        <p><strong>Try it yourself</strong>:</p>
+        <ul>
+          <li>[ ] Upload a long PDF or paste long text</li>
+          <li>[ ] Specify your target audience</li>
+          <li>[ ] Set the number of key points (10-20 recommended)</li>
+          <li>[ ] Add specific requirements</li>
+        </ul>
+
+        <p><strong>Example result</strong>:</p>
+        <div class="prompt-code">
+          1. 화물 중량 확인 필수
+          <br />
+          - 왜 중요한가: 과적 시 차량 손상, 법규 위반 <br />
+          - 실수하면: 최대 200만원 과태료 <br />
+          - 체크 포인트: 출발 전 계근대 필수 통과
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <p>12월 2일 월요일, 오후 2시. 본사 회의실.</p>
+
+      <h3 id="scene-6">🚀 81.7% 결과 발표</h3>
+      <div class="media-container" data-media-type="video">
+        <video
+          class="scene-video"
+          src="ep08_img06_presentation.mp4"
+          controls
+          title="프레젠테이션 화면에 표시된 81.7% 개선률."
+        ></video>
+        <div class="media-selector" style="display: none; margin-top: 10px;">
+          <label>미디어 선택: </label>
+          <select class="file-selector">
+            <option value="">-- 선택 --</option>
+          </select>
+          <button class="apply-media" style="margin-left: 10px; padding: 5px 15px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer;">적용</button>
+        </div>
+      </div>
+      <div class="caption">프레젠테이션 화면에 표시된 81.7% 개선률.</div>
+
+      <p>정민수 본부장 앞에 엑셀 파일이 펼쳐졌다.</p>
+      <p>"1주일 결과입니다." 서윤이 발표를 시작했다.</p>
+      <p>"일일 보고서: 평균 작업 시간 50분 → 9분. 단축률 82%."</p>
+      <p>"신입 교육: 3시간 → 35분. 단축률 81%."</p>
+      <p>"안전사고 보고서: 80분 → 15분. 단축률 81%."</p>
+      <p>"전체 평균..." 서윤이 숨을 고르고 말했다. "업무 효율 개선률 81.7%."</p>
+      <p>회의실이 조용해졌다.</p>
+      <p>"목표가 12%였죠." 정민수가 천천히 말했다. "81%면..."</p>
+      <p>
+        "6배 이상 초과 달성입니다." 도진이 말을 받았다. "하지만 본부장님, 더
+        중요한 게 있습니다."
+      </p>
+      <p>도진이 다음 슬라이드를 넘겼다. 현장 작업자 5명의 인터뷰.</p>
+      <ul>
+        <li>
+          "김택배 대리: '보고서 쓰느라 밤 10시까지 남던 날이 일주일에 3번.
+          이제는 정시 퇴근.'"
+        </li>
+        <li>
+          "박신입 사원: '150페이지 매뉴얼이 무서웠는데, 20페이지 요약본으로
+          핵심을 이해했어요.'"
+        </li>
+        <li>
+          "송배송 대리: '데이터 입력만 하면 되니까 실수가 없어요. 전에는 계산
+          틀려서 다시 만든 적이 한두 번이 아니었는데.'"
+        </li>
+      </ul>
+      <p>정민수는 한참을 슬라이드를 봤다.</p>
+      <p>"품질도 올랐나요?"</p>
+      <p>
+        "네." 서윤이 고개를 끄덕였다. "오류율 67% 감소했습니다. 사람이 계산하면
+        실수하는데, AI는 안 하니까요."
+      </p>
+      <p>
+        "그리고..." 도진이 마지막 슬라이드를 넘겼다. "절약된 시간으로 현장 안전
+        점검을 두 배 늘렸습니다. 서류 작업이 줄어서요."
+      </p>
+      <p>정민수가 자리에서 일어났다. 창밖을 봤다.</p>
+
+      <h3 id="scene-7">🎯 정민수의 결심</h3>
+      <div class="media-container" data-media-type="video">
+        <video
+          class="scene-video"
+          src="ep08_img07_decision.mp4"
+          controls
+          title="창밖을 보며 결심하는 정민수 본부장."
+        ></video>
+        <div class="media-selector" style="display: none; margin-top: 10px;">
+          <label>미디어 선택: </label>
+          <select class="file-selector">
+            <option value="">-- 선택 --</option>
+          </select>
+          <button class="apply-media" style="margin-left: 10px; padding: 5px 15px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer;">적용</button>
+        </div>
+      </div>
+      <div class="caption">창밖을 보며 결심하는 정민수 본부장.</div>
+
+      <p>
+        "12%를 요구한 건..." 그가 천천히 말했다. "솔직히 불가능할 거라
+        생각했습니다. AI가 그렇게까지 도움이 될 거라고는..."
+      </p>
+      <p>그는 두 사람을 돌아봤다.</p>
+      <p>
+        "3주 더 줍니다. 이번엔 터미널 전체로 확대하세요. 작업자 50명에게
+        적용해보고, 실제 업무량 변화를 측정하세요."
+      </p>
+      <p>
+        "그리고 이서윤 과장." 정민수가 서윤을 봤다. "투명성 보고서, 잘 봤습니다.
+        앞으로도 AI 사용 내역은 전부 문서화하세요. 우리가 다른 터미널의 모델이
+        될 겁니다."
+      </p>
+      <p>"네!" 서윤의 목소리가 떨렸다.</p>
+      <p>
+        "최도진 대리." 정민수가 도진을 봤다. "당신이 만든 템플릿, 본사에서도
+        쓰고 싶다는 팀이 벌써 3곳입니다. 확산 준비하세요."
+      </p>
+      <p>
+        도진이 놀란 표정으로 서윤을 봤다. 서윤도 믿기지 않는다는 얼굴이었다.
+      </p>
+      <p>
+        "2주의 기적이네요." 정민수가 처음으로 웃었다. "다음엔 2달의 혁명을
+        만들어보세요."
+      </p>
+
+      <div class="separator"></div>
+
+      <div
+        class="ai-guide"
+        style="background-color: #ffe6e6; border-left: 5px solid #c00"
+      >
+        <h2>🎯 Learning Concept: "Don't Think, Do AI" - Level 3</h2>
+
+        <p>
+          <strong
+            >Chapter 3: Measure, Document, Scale (측정하고, 문서화하고,
+            확산하라)</strong
+          >
+        </p>
+
+        <p>AI 도입의 3단계:</p>
+        <ol>
+          <li><strong>Measure (측정)</strong>: 도입 전/후를 정확히 비교하라</li>
+          <li>
+            <strong>Document (문서화)</strong>: 모든 과정과 결과를 기록하라
+          </li>
+          <li>
+            <strong>Scale (확산)</strong>: 성공 사례를 체계적으로 전파하라
+          </li>
+        </ol>
+
+        <p><strong>Why it matters in 물류</strong>:</p>
+        <ul>
+          <li>
+            물류는 "숫자로 말하는" 산업. 정성적 개선이 아니라 정량적 증명이 필요
+          </li>
+          <li>
+            문서화는 신뢰의 기반. "AI 썼어요"가 아니라 "AI로 이렇게 했고, 이런
+            결과가 나왔어요"
+          </li>
+          <li>
+            한 팀의 성공이 전사 확산의 시작. 하지만 체계 없이 확산하면 혼란만
+            가중
+          </li>
+        </ul>
+
+        <p><strong>Success indicators</strong>:</p>
+        <ul>
+          <li>✅ Before/After 데이터가 명확함</li>
+          <li>✅ 모든 작업 과정이 재현 가능하게 문서화됨</li>
+          <li>✅ 다른 팀이 똑같이 따라할 수 있는 가이드 존재</li>
+          <li>❌ "대충 좋아진 것 같아요" 같은 모호한 평가</li>
+          <li>❌ "어떻게 했는지 기억 안 나요" 같은 비재현성</li>
+        </ul>
+      </div>
+
+      <div class="separator"></div>
+
+      <p>12월 2일 월요일, 저녁 7시.</p>
+
+      <h3 id="scene-8">🌃 밤의 고속도로</h3>
+      <div class="media-container" data-media-type="video">
+        <video
+          class="scene-video"
+          src="ep08_img08_ending.mp4"
+          controls
+          title="서울 야경과 곤지암으로 향하는 고속도로. 전화 통화 중인 두 사람."
+        ></video>
+        <div class="media-selector" style="display: none; margin-top: 10px;">
+          <label>미디어 선택: </label>
+          <select class="file-selector">
+            <option value="">-- 선택 --</option>
+          </select>
+          <button class="apply-media" style="margin-left: 10px; padding: 5px 15px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer;">적용</button>
+        </div>
+      </div>
+      <div class="caption">
+        서울 야경과 곤지암으로 향하는 고속도로. 전화 통화 중인 두 사람.
+      </div>
+
+      <p>본사 건물을 나서는 서윤. 곤지암으로 가는 도진.</p>
+      <p>서윤이 도진에게 전화를 걸었다.</p>
+      <p>"도진 대리님, 우리... 해냈어요."</p>
+      <p>
+        "아직 시작도 안 했어요, 과장님." 도진이 웃었다. "이제 50명이에요. Phase
+        3."
+      </p>
+      <p>"무섭지 않으세요?"</p>
+      <p>
+        "무섭죠. 근데..." 도진이 핸들을 잡으며 말했다. "85% + 15%, 기억하세요?"
+      </p>
+      <p>"네."</p>
+      <p>
+        "우리 둘이 85%를 만들었으니까, 이제 50명이 나머지 15%를 채울 차례예요."
+      </p>
+      <p>서윤이 웃었다. "그럼 또 81% 개선이 나오는 거 아니에요?"</p>
+      <p>
+        "그렇게 되면..." 도진이 고속도로에 진입하며 말했다. "CJ 대한통운 역사에
+        남는 거죠."
+      </p>
+      <p>전화기 너머로 서윤의 웃음소리가 들렸다.</p>
+      <p>"좋아요. Phase 3, 시작합시다."</p>
+      <p>
+        12월의 서울 야경이 빛났다. 곤지암으로 가는 고속도로, 도진의 차가 달렸다.
+      </p>
+      <p>새로운 도전이 시작되는 밤이었다.</p>
+
+      <div class="separator"></div>
+
+      <p style="text-align: center; font-size: 0.9em; color: #777">
+        **[Episode 8 완료]**
+      </p>
+      <p
+        style="
+          text-align: center;
+          font-size: 0.9em;
+          color: #777;
+          margin-top: 5px;
+        "
+      >
+        *다음 Episode 9에서 Phase 3 (Department Adoption)이 시작됩니다.*
+      </p>
+
+      <div class="separator"></div>
+    </div>
+    <script>
+      const toggleButton = document.querySelector(".nav-toggle");
+      const mainNav = document.getElementById("main-menu");
+
+      toggleButton.addEventListener("click", () => {
+        const isExpanded =
+          toggleButton.getAttribute("aria-expanded") === "true" || false;
+        toggleButton.setAttribute("aria-expanded", !isExpanded);
+        mainNav.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>
