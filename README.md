@@ -7,6 +7,7 @@ Episode 1~20까지 순차 제작 중입니다.
 
 ## ✔ 에피소드 제작 현황
 
+<<<<<<< HEAD
 |   Episode | Status |
 | --------: | :----: |
 | Episode 1 |  완료  |
@@ -31,6 +32,45 @@ Episode 4 | ✅ 완료 | | Episode 5 | ✅ 완료 | | Episode 6 | ✅ 완료 | |
 
 ## ✔ 자동 생성 구조
 
+=======
+| Episode | Status |
+|--------:|:------:|
+|--------:|:------:|
+|--------:|:------:|
+|    Episode | Status |
+| ---------: | :----: |
+|  Episode 1 |  완료  |
+|  Episode 2 |  완료  |
+|  Episode 3 |  완료  |
+|  Episode 4 |  완료  |
+|  Episode 5 |  완료  |
+|  Episode 6 |  완료  |
+|  Episode 7 |  완료  |
+|  Episode 8 |  완료  |
+|  Episode 9 | 작성중 |
+---
+## ✔ 자동 생성 구조
+| Episode 1 | ✅ 완료 |
+| Episode 2 | ✅ 완료 |
+| Episode 3 | ✅ 완료 |
+| Episode 4 | ✅ 완료 |
+| Episode 5 | ✅ 완료 |
+| Episode 6 | ✅ 완료 |
+| Episode 7 | ✅ 완료 |
+| Episode 8 | ✅ 완료 |
+| Episode 9 | ⏳ 작성중 |
+| Episode 10 | ⏳ 작성중 |
+| Episode 11 | ⏳ 작성중 |
+| Episode 12 | ⏳ 작성중 |
+| Episode 13 | ⏳ 작성중 |
+| Episode 14 | ⏳ 작성중 |
+| Episode 15 | ⏳ 작성중 |
+| Episode 16 | ⏳ 작성중 |
+| Episode 17 | ⏳ 작성중 |
+| Episode 18 | ⏳ 작성중 |
+| Episode 19 | ⏳ 작성중 |
+| Episode 20 | ⏳ 작성중 |
+>>>>>>> 20f5511a807af4e63fdc7823bc080fd6cceb2d41
 프로젝트는 아래와 같이 구성됩니다:
 
 - `episode1/index.html`
