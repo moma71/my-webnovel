@@ -30,13 +30,15 @@ Episode 1~20까지 순차 제작 중입니다.
 | Episode 18 | ⏳ 작성중 |
 | Episode 19 | ⏳ 작성중 |
 | Episode 20 | ⏳ 작성중 |
+---
+
 ## ✔ 자동 생성 구조
 
 프로젝트는 아래와 같이 구성됩니다:
 
 - `episode1/index.html`
 - `episode2/index.html`
-- …
+- ...
 - `episode20/index.html`
 - `episode-status.md`
 - `README.md` _(자동 업데이트)_
