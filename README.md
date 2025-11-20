@@ -10,6 +10,7 @@ Episode 1~20까지 순차 제작 중입니다.
 | Episode | Status |
 |--------:|:------:|
 |--------:|:------:|
+|--------:|:------:|
 |    Episode | Status |
 | ---------: | :----: |
 |  Episode 1 |  완료  |
@@ -22,6 +23,7 @@ Episode 1~20까지 순차 제작 중입니다.
 |  Episode 8 |  완료  |
 |  Episode 9 | 작성중 |
 ---
+## ✔ 자동 생성 구조
 | Episode 1 | ✅ 완료 |
 | Episode 2 | ✅ 완료 |
 | Episode 3 | ✅ 완료 |
@@ -42,8 +44,6 @@ Episode 1~20까지 순차 제작 중입니다.
 | Episode 18 | ⏳ 작성중 |
 | Episode 19 | ⏳ 작성중 |
 | Episode 20 | ⏳ 작성중 |
-## ✔ 자동 생성 구조
-
 프로젝트는 아래와 같이 구성됩니다:
 
 - `episode1/index.html`
