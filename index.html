@@ -30,18 +30,8 @@
 </head>
 
 <body>
-  <header>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
-      <div style="display:flex;align-items:center;gap:12px;font-weight:700;color:var(--text)">
-        <span style="font-size:20px;">📘</span>
-        <span>Do, 85%</span>
-      </div>
-      <nav style="display:flex;gap:18px;align-items:center;">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
-  </header>
+  <div id="common-header"></div>
+  <script src="episodes-common/load-header.js"></script>
 
   <main class="container">
     <section class="hero">
@@ -86,9 +76,5 @@
     © Do, 85% — Project · Author: 조선대학교디자인공학과 김병욱 교수
   </footer>
 </body>
-<script>
-document.getElementById("nav-toggle").addEventListener("click", function () {
-    document.getElementById("main-nav").classList.toggle("show");
-});
-</script>
+
 </html>

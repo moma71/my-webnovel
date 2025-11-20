@@ -9,28 +9,9 @@
     <link rel="stylesheet" href="episode-content.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="nav-inner">
-            <div class="brand">
-                <a href="../index.html" class="logo">📘 Do, 85%</a> 
-            </div>
-              <!-- ✅ 햄버거 버튼 추가 -->
-    <button class="nav-toggle" id="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-            <nav class="main-nav" id="main-menu">
-                <a href="../index.html">Home</a>
-                <a href="../about.html">About</a>
-            </nav>
-            
-            <button class="nav-toggle" aria-controls="main-menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        </header>
+   <div id="common-header"></div>
+<script src="/episodes-common/load-header.js" defer></script>
+
 
         <div class="episode-wrapper">
     <div class="chapter-title">
@@ -380,18 +361,6 @@
     </div>
     <p style="text-align: center; font-size: 0.9em; color: #777;">**[Episode 3 끝]**</p>
     <p style="text-align: center; font-size: 0.9em; color: #777; margin-top: 5px;">*매주 화요일, 금요일 연재 | 구독하고 알림 받기 | 💬 댓글로 실습 후기 남겨주세요!*</p>
-<script>
-        const toggleButton = document.querySelector('.nav-toggle');
-        const mainNav = document.getElementById('main-menu');
-        
-        toggleButton.addEventListener('click', () => {
-            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
-            toggleButton.setAttribute('aria-expanded', !isExpanded);
-            mainNav.classList.toggle('show');
-        });
-        document.getElementById("nav-toggle").addEventListener("click", function () {
-    document.getElementById("main-nav").classList.toggle("show");
-});
-    </script>
+
 </body>
 </html>

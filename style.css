@@ -1,323 +1,107 @@
-/*
-  ================================================================
-  1. Global Base Styles
-  ================================================================
-*/
-
+/* =========================
+   GLOBAL
+========================= */
 body {
-    font-family: 'Pretendard', 'Arial', sans-serif;
-    background: #f2f3f7;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    overflow-x: hidden; /* 모바일 수평 스크롤 방지 */
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard", Arial, sans-serif;
+  line-height: 1.6;
 }
 
-/* 공통 컨테이너 */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/*
-  ================================================================
-  2. Navigation (Header) Styles
-  ================================================================
-*/
-
+/* =========================
+   FIXED HEADER
+========================= */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.98); 
-  backdrop-filter: blur(6px);
-  z-index: 1200; /* 헤더가 항상 최상단에 위치 */
-  border-bottom: 1px solid rgba(30,41,59,0.08); 
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 9999;
 }
 
-.site-header .nav-inner {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 12px 20px; /* 데스크톱 패딩 */
+.header-inner {
+  max-width: 1080px;
+  margin: auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.brand .logo {
-  font-weight:700;
-  color:#243447;
-  text-decoration:none;
-  font-size:20px;
+/* LOGO */
+.logo a {
+  font-weight: bold;
+  color: #2563eb;
 }
 
+/* MAIN NAV */
 .main-nav {
-  display:flex;
-  gap:25px;
-  align-items:center;
+  display: flex;
+  gap: 24px;
 }
 
 .main-nav a {
-  color:#243447;
-  text-decoration:none;
-  font-weight:600;
-  padding:8px 10px;
-  border-radius:8px;
-  transition: background 0.2s;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.main-nav a:hover {
-  background: rgba(76,110,245,0.12);
-  color: #4C6EF5;
+/* HAMBURGER (PC 숨김) */
+.hamburger {
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-/* 모바일 햄버거 토글 버튼 */
-.nav-toggle {
-  display:none; /* 데스크톱에서는 숨김 */
-  flex-direction:column;
-  justify-content:space-around;
-  width:24px;
-  height:20px;
-  background:none;
-  border:none;
-  cursor:pointer;
-  padding:0;
-  z-index: 1300; /* 버튼이 메뉴 항목보다 위에 오도록 설정 */
+/* MOBILE NAV */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 56px;
+  right: 16px;
+  width: 150px;
+  background: white;
+  padding: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
-.nav-toggle span {
-  display:block;
-  width:24px;
-  height:2px;
-  background:#243447;
-  margin:4px 0;
-  border-radius:2px;
-  transition: transform 0.3s, opacity 0.3s;
+.mobile-nav a {
+  padding: 10px 16px;
+  font-size: 15px;
+  color: #333;
 }
 
-/*
-  ================================================================
-  3. Hero Section Styles (중앙 정렬 수정)
-  ================================================================
-*/
-
-/* Index Page Hero */
-.hero {
-    width: 100%;
-    background: linear-gradient(145deg, #6e8df5, #88a8ff);
-    padding: 80px 5%; 
-    color: white;
-    box-sizing: border-box;
-    /* Hero 내부 콘텐츠 중앙 정렬 적용 */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center;
+.mobile-nav.show {
+  display: flex;
 }
 
-.hero h1 {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 10px;
-    word-break: keep-all; 
-    margin-top: 0;
-    max-width: 600px;
+/* =========================
+   CONTENT TOP PADDING
+========================= */
+body {
+  padding-top: 70px; /* 고정 헤더 높이 확보 */
 }
 
-.hero p {
-    margin-top: 0;
-    font-size: 20px;
-    word-break: keep-all;
-    max-width: 700px;
-}
-
-/* About Page Hero (스타일 통일) */
-.hero.about-hero {
-    background: linear-gradient(145deg, #4c6ef5, #7f9cff);
-    padding: 90px 5%; 
-    margin-top: 0;
-}
-
-.hero-title {
-    font-size: 46px;
-    font-weight: 800;
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-
-.hero-sub {
-    font-size: 20px;
-    opacity: 0.9;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-
-/*
-  ================================================================
-  4. Episode List Styles
-  ================================================================
-*/
-
-.episode-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.episode-title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.episode-grid {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.episode-btn {
-    background: #5279ff;
-    color: white;
-    padding: 15px 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    transition: 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px; 
-}
-
-.episode-btn:hover {
-    background: #325ce6;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/*
-  ================================================================
-  5. About Page Content Styles
-  ================================================================
-*/
-
-.about-page {
-    /* 이 클래스는 about.html의 body에 추가되어 헤더 공간을 확보합니다. */
-    padding-top: 60px; 
-}
-
-.section {
-    max-width: 850px;
-    margin: 70px auto;
-    padding: 0 20px;
-}
-
-.section-title {
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 18px;
-    color: #4c6ef5; 
-}
-
-.text-block {
-    font-size: 18px;
-    line-height: 1.65;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.profile-card {
-    display: flex;
-    gap: 25px;
-    background: white;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 5px 16px rgba(0,0,0,0.08);
-    align-items: center;
-}
-
-
-/*
-  ================================================================
-  6. Responsive Media Queries
-  ================================================================
-*/
-
-/* 768px 이하: 모바일 햄버거 메뉴 활성화 지점 */
-@media (max-width:768px) {
-  /* 햄버거 메뉴 표시 */
-  .nav-toggle { display:flex; } /* ✅ 햄버거 버튼이 화면에 나타나도록 함 */
-  
-  /* 모바일 뷰에서 nav-inner의 패딩 조정 */
-  .site-header .nav-inner {
-    padding: 12px 15px; /* 좁은 화면에서 패딩을 줄여 공간 확보 */
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
   }
 
-  /* 메인 메뉴 숨기기 및 스타일링 */
-  .main-nav { 
-    position: absolute;
-    top: 60px; /* 헤더 높이와 맞춤 */
-    right: 15px; /* nav-inner padding(15px)과 맞춤 */
-    background:white;
-    box-shadow:0 8px 28px rgba(15,23,42,0.15);
-    border-radius:10px;
-    padding:10px 15px;
-    flex-direction:column;
-    gap:5px;
-    display:none; 
-    min-width:150px;
-    align-items:flex-start;
+  .hamburger {
+    display: block;
   }
-  
-  .main-nav.show { display:flex; } 
-
-  .main-nav a {
-      width: 100%; 
-      padding: 10px 15px;
-  }
-
-    /* Index Page: 에피소드 그리드 조정 (중간 크기) */
-    .episode-grid {
-        grid-template-columns: repeat(2, 1fr); 
-        max-width: 500px; 
-    }
-}
-
-/* 480px 이하: 매우 좁은 화면 최적화 */
-@media (max-width: 480px) {
-    
-    /* Hero 폰트 크기 조정 (Index/About 공통) */
-    .hero h1 {
-        font-size: 32px;
-    }
-    .hero p, .hero-sub {
-        font-size: 16px;
-    }
-
-    /* Index Page: 에피소드 그리드를 1열로 변경 */
-    .episode-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    /* About Page: 프로필 카드를 1열로 변경 */
-    .profile-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* About Page: 섹션 타이틀 크기 조정 */
-    .section-title {
-        font-size: 24px;
-    }
-    .text-block {
-        font-size: 16px;
-    }
 }

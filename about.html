@@ -1,103 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About — Do, 85%</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+  <meta charset="UTF-8">
+  <title>About — Do, 85%</title>
 
-<body class="about-page">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/episodes-common/load-header.js" defer></script>
 
-    <header class="site-header">
-        <div class="nav-inner">
-            <div class="brand">
-                <a href="index.html" class="logo">📘 Do, 85%</a>
-            </div>
-              <!-- ✅ 햄버거 버튼 추가 -->
-    <button class="nav-toggle" id="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-            <nav class="main-nav" id="main-menu-about">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-            </nav>
-            
-            <button class="nav-toggle" aria-controls="main-menu-about" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+  <style>
+    .about-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+  </style>
+</head>
 
-    <section class="hero about-hero">
-        <div class="hero-title">About This Project</div>
-        <div class="hero-sub">
-            현장 중심 리얼리즘 소설과 AI 실무 튜토리얼을 결합한  
-            <strong>하이브리드 웹소설 프로젝트</strong>
-        </div>
-    </section>
+<body>
 
-    <section class="section">
-        <div class="section-title">📌 프로젝트 개요</div>
-        <div class="text-block">
-            <strong>《Do, 85%》</strong>는  
-            현장 중심의 리얼리즘을 기반으로 하면서도  
-            AI 실무 튜토리얼을 자연스럽게 결합한  
-            새로운 형태의 **하이브리드 웹소설 프로젝트**입니다.  
-            <br><br>
-            단순한 스토리를 넘어,  
-            실제 AI 활용 사례, 데이터 처리 과정,  
-            업무 자동화 튜토리얼 등이  
-            이야기 속에서 자연스럽게 등장합니다.
-            <br><br>
-            독자는 웹소설을 읽는 동시에  
-            **AI 실무 테크닉을 직관적으로 익힐 수 있는 경험**을 하게 됩니다.
-        </div>
-    </section>
+<div class="about-container">
 
-    <section class="section">
-        <div class="section-title">✍️ 작가 소개</div>
+  <h2>About This Project</h2>
 
-        <div class="profile-card">
-            <div class="profile-img">K</div>
+  <p>
+    현장 중심 리얼리즘 소설과 AI 실무 튜토리얼을 결합한 
+    <strong>하이브리드 웹소설 프로젝트</strong>
+  </p>
 
-            <div class="profile-info">
-                <h3>김병욱 교수</h3>
-                <p>조선대학교 디자인공학과</p>
-                <p>웹콘텐츠, 인터랙티브 미디어, AI 활용 디자인 연구</p>
-                <p>본 프로젝트의 총괄 디렉터 & 시나리오 작가</p>
-            </div>
-        </div>
+  <h3>📘 프로젝트 개요</h3>
 
-        <div class="text-block" style="margin-top:30px;">
-            김병욱 교수는 디지털 콘텐츠, 사용자 경험(UX),  
-            AI 기반 디자인 시스템 연구를 중심으로  
-            다양한 창작 프로젝트를 이끌고 있습니다.  
-            <br><br>
-            《Do, 85%》 프로젝트는  
-            “AI 실무와 웹소설의 융합”이라는 새로운 시도를 통해  
-            더 많은 사람들이 AI를 쉽고 흥미롭게 이해하도록 만든  
-            실험적이면서도 교육적인 창작물입니다.
-        </div>
-    </section>
+  <p>
+    <strong>&lt;Do, 85%&gt;</strong> 는 현장 중심의 리얼리즘을 기반으로 하면서도 
+    AI 실무 튜토리얼을 자연스럽게 결합한 새로운 형태의 
+    <strong>하이브리드 웹소설 프로젝트</strong>입니다.
+  </p>
 
-    <script>
-        // 햄버거 메뉴 토글 로직 (index.html과 동일)
-        const toggleButton = document.querySelector('.nav-toggle');
-        const mainNav = document.getElementById('main-menu-about');
-        
-        toggleButton.addEventListener('click', () => {
-            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
-            toggleButton.setAttribute('aria-expanded', !isExpanded);
-            mainNav.classList.toggle('show');
-        });
-        document.getElementById("nav-toggle").addEventListener("click", function () {
-    document.getElementById("main-nav").classList.toggle("show");
-});
-    </script>
+  <p>
+    단순한 스토리를 넘어, 실제 AI 활용·데이터 처리·업무 자동화 튜토리얼 등이 
+    이야기 속에서 자연스럽게 등장합니다.
+  </p>
+
+  <h3>✏️ 작가 소개</h3>
+
+  <p><strong>김병욱 교수</strong></p>
+  <p>조선대학교 디자인공학과</p>
+
+  <p>
+    웹콘텐츠, 인터랙티브 미디어, AI 활용 디자인 연구  
+    본 프로젝트의 총괄 디렉터 & 시나리오 작가
+  </p>
+
+  <p>
+    김병욱 교수는 디지털 콘텐츠, 사용자 경험(UX), AI 기반 디자인 시스템 연구를 중심으로
+    다양한 창작 프로젝트를 이끌고 있습니다.
+  </p>
+
+</div>
 
 </body>
 </html>
