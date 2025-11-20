@@ -31,57 +31,12 @@ done
 
 
 ###############################################
-# 2) episode-status.md 자동 생성
+# 2) _readme_status.md 자동 생성
 ###############################################
 
-echo "📝 Writing episode-status.md"
-cat > episode-status.md <<EOF
-# Episode Status
-
-| Episode | Status |
-|--------:|:------:|
-$(echo -e "$EPISODE_STATUS")
-EOF
-
-
-###############################################
-# 3) README.md 제작 현황 자동 업데이트
-###############################################
-
-echo "📝 Updating README.md statuses"
-
-README_TABLE=$(echo -e "$EPISODE_STATUS")
-
-# 완료 구간 계산
-if [[ ${#COMPLETED_LIST[@]} -gt 0 ]]; then
-  FIRST=${COMPLETED_LIST[0]}
-  LAST=${COMPLETED_LIST[-1]}
-  COMPLETE_RANGE="Episode ${FIRST}~${LAST}까지 완료, 20화까지 제작 예정입니다."
-else
-  COMPLETE_RANGE="아직 완료된 에피소드가 없습니다."
-fi
-
-# README 갱신
-awk -v table="$README_TABLE" -v range="$COMPLETE_RANGE" '
-  BEGIN { in_table=0 }
-  /Episode [0-9]+~[0-9]+까지 완료/ {
-    print range
-    next
-  }
-  /^## ✔ 에피소드 제작 현황/ { 
-    print; getline; print ""; print "| Episode | Status |"; print "|--------:|:------:|"
-    in_table=1; next 
-  }
-  in_table==1 && /^\| Episode/ { next }
-  in_table==1 && NF==0 { 
-    print table
-    in_table=0
-    next
-  }
-  { print }
-' README.md > README_tmp.md
-
-mv README_tmp.md README.md
+echo "📝 Writing _readme_status.md"
+cat > _readme_status.md <<EOF
+...
 
 
 ###############################################
