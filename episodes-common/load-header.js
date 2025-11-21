@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // 1) header 삽입
-  fetch("../episodes-common/header.html")
+  fetch("/my-webnovel/episodes-common/header.html")
     .then((response) => response.text())
     .then((data) => {
       document.body.insertAdjacentHTML("afterbegin", data);
@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function initHeaderLogic() {
     const hamburgerBtn = document.getElementById("hamburgerBtn");
     const mobileNav = document.getElementById("mobileNav");
+
+    if (!hamburgerBtn || !mobileNav) return;
 
     // 햄버거 토글
     hamburgerBtn.addEventListener("click", () => {
@@ -27,8 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (episodeMatch) {
       const currentNum = parseInt(episodeMatch[1]);
 
-      const prevEp = currentNum > 1 ? `/episode${currentNum - 1}/` : "#";
-      const nextEp = `/episode${currentNum + 1}/`;
+      const prevEp =
+        currentNum > 1 ? `/my-webnovel/episode${currentNum - 1}/` : "#";
+      const nextEp = `/my-webnovel/episode${currentNum + 1}/`;
 
       prevLinks.forEach((a) => (a.href = prevEp));
       nextLinks.forEach((a) => (a.href = nextEp));
