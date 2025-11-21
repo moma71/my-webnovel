@@ -26,7 +26,7 @@ for i in {1..20}; do
     STATUS="⏳ 작성중"
   fi
 
-  EPISODE_STATUS+="| Episode $i | $STATUS |\n"
+  EPISODE_STATUS+="$i : $STATUS\n"
 done
 
 
@@ -36,7 +36,12 @@ done
 
 echo "📝 Writing _readme_status.md"
 cat > _readme_status.md <<EOF
-...
+# Episode 상태 요약
+
+$EPISODE_STATUS
+
+완료된 에피소드: ${COMPLETED_LIST[*]}
+EOF
 
 
 ###############################################
