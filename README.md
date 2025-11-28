@@ -9,7 +9,7 @@ Episode 1~20까지 순차 제작 중입니다.
 
 새로운 12~20편이 작성되었습니다.(삽화작성중)
 
-1~10편 작성완료 11~20편 삽화작업중
+1~11편 작성완료 12~20편 삽화작업중
 
 ## ✔ 자동 생성 구조
 
@@ -21,13 +21,11 @@ Episode 1~20까지 순차 제작 중입니다.
 - `episode2/index.html`
 - ...
 - `episode20/index.html`
-- `episode-status.md`
-- `README.md` _(자동 업데이트)_
-- `index.html` _(자동 버튼 업데이트)_
+
+- `README.md`
+- `index.html`
 - `about.html`
 - `style.css`
-- `update-status.sh` _(로컬 실행용 스크립트)_
-- `.github/workflows/update-status.yml` _(자동 업데이트)_
 
 ---
 
