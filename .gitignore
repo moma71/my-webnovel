@@ -1,3 +1,8 @@
 # Git 충돌 방지 및 자동 생성 파일 추적 제외
 /_readme_status.md
 /episode-status.md  # 기존 파일도 혹시 모를 추적을 위해 제외
+
+# Local folders to ignore
+/idol/
+/illust_basicImages/
+/production_history/
