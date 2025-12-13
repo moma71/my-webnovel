@@ -1,26 +1,11 @@
-@charset "UTF-8";
-
 /* =========================
-   VARIABLES
-========================= */
-:root {
-  --accent: #5b73f6;
-  --bg: #f3f5f9;
-  --card: #ffffff;
-  --text: #1f2937;
-}
-
-/* =========================
-   GLOBAL RESET & TYPOGRAPHY
+   GLOBAL
 ========================= */
 body {
   margin: 0;
   padding: 0;
-  padding-top: 70px; /* Space for fixed header */
-  font-family: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Pretendard", Arial, sans-serif;
   line-height: 1.6;
-  color: var(--text);
-  background-color: var(--bg);
 }
 
 a {
@@ -29,7 +14,7 @@ a {
 }
 
 /* =========================
-   HEADER (Fixed)
+   FIXED HEADER
 ========================= */
 .site-header {
   position: fixed;
@@ -37,15 +22,14 @@ a {
   left: 0;
   width: 100%;
   background: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid #e5e5e5;
   z-index: 9999;
-  box-sizing: border-box;
 }
 
 .header-inner {
-  max-width: 1100px;
+  max-width: 1080px;
   margin: auto;
-  padding: 12px 24px;
+  padding: 10px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,9 +51,57 @@ a {
   color: #333;
   font-size: 15px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
-/* HAMBURGER */
+/* NAVIGATION DROPDOWN */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-trigger {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  border: 1px solid #eee;
+  padding: 8px 0;
+  z-index: 10000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f3f4f6;
+  color: #2563eb;
+}
+
+.nav-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-divider {
+  color: #ddd;
+  margin: 0 4px;
+}
+
+/* HAMBURGER (PC 숨김) */
 .hamburger {
   display: none;
   font-size: 22px;
@@ -90,7 +122,6 @@ a {
   padding: 12px 0;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .mobile-nav a {
@@ -104,17 +135,37 @@ a {
 }
 
 /* =========================
-   LAYOUT UTILS
+   CONTENT TOP PADDING
 ========================= */
+body {
+  padding-top: 70px; /* 고정 헤더 높이 확보 */
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* =========================
+   LAYOUT & COMPONENTS
+   (Moved from index.html & about.html)
+========================= */
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 30px;
 }
 
-/* =========================
-   HERO SECTION (Index)
-========================= */
+/* --- HERO SECTION --- */
 .hero {
   position: relative;
   overflow: hidden;
@@ -123,7 +174,6 @@ a {
   text-align: center;
   border-radius: 6px;
   margin-bottom: 20px;
-  background-color: #000;
 }
 
 .video-bg {
@@ -170,8 +220,8 @@ a {
 }
 
 .btn-primary {
-  background: var(--card);
-  color: var(--text);
+  background: #ffffff; /* Fallback */
+  color: #1f2937;
   padding: 10px 20px;
   border-radius: 10px;
   display: inline-block;
@@ -180,9 +230,7 @@ a {
   font-weight: bold;
 }
 
-/* =========================
-   EPISODE GRID
-========================= */
+/* --- EPISODE GRID --- */
 h2.section-title {
   text-align: center;
   font-size: 28px;
@@ -204,7 +252,7 @@ h2.section-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent);
+  background: #5b73f6; /* Accent color */
   color: white;
   padding: 28px 18px;
   border-radius: 12px;
@@ -217,7 +265,6 @@ h2.section-title {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   z-index: 1;
   transition: transform 0.2s;
-  min-height: 100px;
 }
 
 .ep-btn:hover {
@@ -251,14 +298,16 @@ h2.section-title {
   display: none;
 }
 
-/* =========================
-   ABOUT PAGE
-========================= */
-body.about-page {
-  background: url('about_bg.png') no-repeat center center fixed;
-  background-size: cover;
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #666;
+  font-size: 14px;
+  margin-top: 30px;
 }
 
+/* --- ABOUT PAGE STYLES --- */
 .about-container {
   max-width: 800px;
   margin: 60px auto;
@@ -301,19 +350,6 @@ body.about-page {
   padding-bottom: 10px;
 }
 
-.about-container p {
-  font-size: 17px;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 20px;
-  word-break: keep-all;
-}
-
-.about-container strong {
-  color: #111;
-  font-weight: 700;
-}
-
 .author-profile {
   display: flex;
   flex-direction: column;
@@ -339,20 +375,7 @@ body.about-page {
   margin-top: 8px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-footer {
-  text-align: center;
-  padding: 30px 0;
-  color: #666;
-  font-size: 14px;
-  margin-top: 30px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
+/* --- RESPONSIVE --- */
 @media (max-width: 1000px) {
   .episode-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -360,37 +383,29 @@ footer {
 }
 
 @media (max-width: 768px) {
-  /* Header */
-  .main-nav {
-    display: none;
-  }
-  .hamburger {
-    display: block;
+  .episode-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* About Page */
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero {
+    padding: 40px 12px;
+  }
+
   .about-container {
     margin: 20px;
     padding: 30px;
   }
+
   .about-container h2 {
     font-size: 26px;
   }
+
   .about-container .subtitle {
     font-size: 16px;
     margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 700px) {
-  /* Index Page */
-  .episode-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .hero h1 {
-    font-size: 32px;
-  }
-  .hero {
-    padding: 40px 12px;
   }
 }
